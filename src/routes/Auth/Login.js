@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 function Login(){
+
+  const [account, setAccount] = useState({
+    id: "",
+    password: "",
+  });
+
+  // input에 id, pw가 입력되면 account 변수에 value를 저장
+  const onChangeAccount = (e) => {
+    setAccount({
+      ...account,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return(
     <>
@@ -13,10 +26,18 @@ function Login(){
         <div className="all_login">
           <div className="login_section">
             <span className="ID">ID</span>
-            <input type="text" className="input_id" placeholder="ID를 입력하세요"></input>
+            <input 
+              type="text" 
+              className="input_id" 
+              placeholder="ID를 입력하세요"
+              onChange={onChangeAccount}></input>
             <br />
             <span className="PW">PW</span>
-            <input type="password" className="input_pw" placeholder="비밀번호를 입력하세요"></input>
+            <input 
+              type="password" 
+              className="input_pw" 
+              placeholder="비밀번호를 입력하세요"
+              onChange={onChangeAccount}></input>
           </div>
         </div>
         <button className="login_button">로그인</button>
