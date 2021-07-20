@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Login.css';
-import Header from "../component/Header";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Login(){
 
   return(
     <>
       <Header />
-      {/* 로그인 */}
+      
         <p className="login_title">Login</p>
         <div className="all_login">
           <div className="login_section">
@@ -26,23 +27,7 @@ function Login(){
         <br />
         <button className="google_button">구글로 로그인하기</button>
 
-      {/* 푸터 */}  
-      <section className="FooterContainer">
-        <div className="FirstFooter">
-          <footer>
-            <h1 className="name">One can do it!</h1>
-            <nav>
-              <ul className="lists">
-                <li>이용약관</li>
-                <li>이용안내</li>
-                <li>입점문의</li>
-              </ul>
-              <hr className="line" />
-              <p className="email">E-mail</p>
-            </nav>
-          </footer>
-        </div>
-      </section>  
+      <Footer />
     </>
   );  
 }
