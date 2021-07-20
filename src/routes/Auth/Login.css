@@ -4,9 +4,11 @@ body {
 }
 
 /* 헤더 */
-.head {
+.HeaderContainer {
   background-color: #31572E;
   height: 60px;
+  width: 100%;
+  margin-top: -1.2%;
 }
 
 /* 로그인, 회원가입 */
@@ -15,12 +17,13 @@ body {
   /* rigth 값을 주면 적용이 안됨 이유를 모르겠음 */
   justify-content: flex-end;
   list-style: none;
+  padding: 1%;
+  color: white;
+  width: 100%;
 }
 
-.sign_up ul a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #000;
+.auth li {
+  margin-right: 3%;
 }
 
 /* nav */
@@ -29,11 +32,13 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin: 2%;
 }
 
 .title {
   margin-right: 50px;
   font-size: 64px;
+  font-family: Montserrat;
 }
 
 .title_search .search {
@@ -45,6 +50,12 @@ body {
   width: 100%;
   height: 100%;
   font-size: 24px;
+  padding: 0 1em;
+  border-bottom: 2px solid lightgray;
+  border-top: 0 solid white;
+  border-right: 0 solid white;
+  border-left: 0 solid white;
+  outline: none;
 }
 
 /* category */
@@ -77,11 +88,13 @@ body {
   font-family: Montserrat;
   font-size: 55px;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
+  margin-top: 15%;
 }
 
 .login_section {
-  padding-left: 500px;
+  padding-left: 34%;
+  align-items: center;
 }
 
 .ID {
@@ -127,26 +140,11 @@ body {
   font-family: Montserrat;
   border: 2px solid #31572E;
   border-radius: 10px;
-  margin-left: 580px;
+  margin-left: 39%;
+  margin-bottom: 10px;
+  margin-top: 1%;
 }
 
-.find_section {
-  text-align: center;
-  padding: 10px;
-  
-}
-
-.join {
-  text-decoration: none;
-  font-family: Montserrat;
-  color: black;
-}
-
-.find {
-  text-decoration: none;
-  font-family: Montserrat;
-  color: black;
-}
 
 .kakao_button {
   width: 340px;
@@ -156,7 +154,7 @@ body {
   font-family: Montserrat;
   border: 2px solid rgb(255, 238, 0);
   border-radius: 10px;
-  margin-left: 580px;
+  margin-left: 39%;
 }
 
 .naver_button {
@@ -167,7 +165,7 @@ body {
   font-family: Montserrat;
   border: 2px solid rgb(69, 177, 43);
   border-radius: 10px;
-  margin-left: 580px;
+  margin-left: 39%;
   margin-top: 10px;
 }
 
@@ -179,12 +177,16 @@ body {
   font-family: Montserrat;
   border: 1.5px solid rgb(4, 97, 204);
   border-radius: 10px;
-  margin-left: 580px;
+  margin-left: 39%;
   margin-top: 10px;
   margin-bottom: 30px;
 }
 
 /* 푸터 */
+.FooterContainer{
+  margin-top: 5%;
+}
+
 #footer {
   background: white;
 }
@@ -205,6 +207,7 @@ body {
 
   position: absolute;
   margin-left: 50%;
+  margin-top: 4.2%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
