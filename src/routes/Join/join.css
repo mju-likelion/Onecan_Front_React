@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login_title {
+  font-family: Montserrat;
+  font-size: 55px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 15%;
+}
+
+.login_section {
+  padding-left: 34%;
+  align-items: center;
+}
+
+.ID {
+  font-family: Montserrat;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
+.PW {
+  font-family: Montserrat;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
+.input_id {
+  height: 30px;
+  width: 280px;
+  margin-left: 14px;
+  margin-bottom: 10px;
+  border: 2px solid #31572E;
+  border-radius: 10px;
+}
+
+.input_pw {
+  height: 30px;
+  width: 280px;
+  margin-bottom: 15px;
+  border: 2px solid #31572E;
+  border-radius: 10px;
+}
+
+.login_button {
+  width: 340px;
+  height: 30px;
+  background-color: #31572E;
+  color: white;
+  font-family: Montserrat;
+  border: 2px solid #31572E;
+  border-radius: 10px;
+  margin-left: 39%;
+  margin-bottom: 10px;
+  margin-top: 1%;
+}
+
+
+.kakao_button {
+  width: 340px;
+  height: 30px;
+  background-color: rgb(255, 238, 0);
+  color: black;
+  font-family: Montserrat;
+  border: 2px solid rgb(255, 238, 0);
+  border-radius: 10px;
+  margin-left: 39%;
+}
+
+.naver_button {
+  width: 340px;
+  height: 30px;
+  background-color: rgb(69, 177, 43);
+  color: black;
+  font-family: Montserrat;
+  border: 2px solid rgb(69, 177, 43);
+  border-radius: 10px;
+  margin-left: 39%;
+  margin-top: 10px;
+}
+
+.google_button {
+  width: 340px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  font-family: Montserrat;
+  border: 1.5px solid rgb(4, 97, 204);
+  border-radius: 10px;
+  margin-left: 39%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
