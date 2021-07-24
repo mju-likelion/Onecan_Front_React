@@ -1,10 +1,9 @@
 import React from 'react';
-import Router from './components/Router';
-import Join from './routes/Join/Join';
+import LoginPage from './components/views/LoginPage/LoginPage';
 
 function App() {
   return (
-    <Router />
+    <LoginPage />
   );
 }
 
