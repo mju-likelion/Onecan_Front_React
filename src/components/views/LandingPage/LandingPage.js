@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
-
+import Header from '../../../components/views/Header/Header'
+import Footer from '../../../components/views/Footer/Footer'
 
 function LandingPage(props) {
 
@@ -22,6 +23,8 @@ function LandingPage(props) {
     }
 
     return (
+      <>
+      <Header />
       <div style= {{
         display: 'flex', justifyContent:'center', alignItems:'center',
         width: '100%', height: '100vh'
@@ -32,6 +35,8 @@ function LandingPage(props) {
           로그아웃
         </button>
       </div>
+      <Footer />
+      </>
     )
   }
 

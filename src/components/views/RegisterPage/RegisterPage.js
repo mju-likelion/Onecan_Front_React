@@ -3,6 +3,8 @@ import {useDispatch} from 'react-redux';
 import {registerUser} from '../../../_actions/user_action';
 import Axios from 'axios';
 import {withRouter} from 'react-router-dom';
+import Header from '../../../components/views/Header/Header'
+import Footer from '../../../components/views/Footer/Footer'
 
 function RegisterPage(props) {
   const dispatch = useDispatch ();
@@ -59,11 +61,16 @@ function RegisterPage(props) {
 
 
     return (
+
+      <>
+      <Header />
       <div style= {{
-        display: 'flex', justifyConent: 'center', alignItems: 'center',
+        display: 'flex', justifyContent: 'center', alignItems: 'center',
         width: '100%', height: '100vh'
-      }}>
-        
+      }}
+
+      >
+      
       <form style={{display: 'flex', flexDirection:'column'}}
             onSubmit={onSubmitHandler}>
             <label>이메일</label>
@@ -83,6 +90,9 @@ function RegisterPage(props) {
             </button>
         </form>
       </div>
+
+      <Footer />
+    </>
     )
 }
 
