@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
-import Header from '../../../components/views/Header/Header'
-import Footer from '../../../components/views/Footer/Footer'
+import Header from '../../../components/views/Header/Header';
+import Footer from '../../../components/views/Footer/Footer';
 
 function LandingPage(props) {
 
