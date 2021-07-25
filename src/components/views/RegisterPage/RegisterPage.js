@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
 
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, } from "antd";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -56,6 +56,8 @@ function RegisterPage(props) {
       email: Email,
       password: Password,
       name: Name,
+      Address: Address,
+      Phone: Phone
     };
 
     dispatch(registerUser(body)).then((response) => {
@@ -107,7 +109,7 @@ function RegisterPage(props) {
               id="email"
               placeholder="이메일을 입력하세요"
               type="text"
-              value={Email}
+              value={Email}w
               onChange={onEmailHandler}
             />
 
@@ -121,14 +123,18 @@ function RegisterPage(props) {
             />
 
             <label>비밀번호</label>
-            <input
+            <Input 
+              id ="password"
+              placeholder="비밀번호를 입력하세요"
               type="password"
               value={Password}
               onChange={onPasswordHandler}
             />
 
             <label>비밀번호 확인</label>
-            <input
+            <Input
+              id ="Confirmpassword"
+              placeholder="비밀번호를 한 번 더 입력하세요"
               type="password"
               value={ConfirmPassword}
               onChange={onConfirmPasswordHandler}
@@ -136,10 +142,20 @@ function RegisterPage(props) {
             <br />
 
             <label>주소</label>
-            <input type="text" value={Address} onChange={onAddressHandler} />
+            <Input 
+            id ="Address"
+            placeholder="주소를 입력하세요"
+            type="text"
+             value={Address} 
+             onChange={onAddressHandler} />
 
-            <label>전화 번호(콜)</label>
-            <input type="text" value={Phone} onChange={onPhoneHandler} />
+            <label>전화번호(콜)</label>
+            <Input 
+            id ="Phone"
+            placeholder="전화번호를 입력하세요"
+            type="text" 
+            value={Phone} 
+            onChange={onPhoneHandler} />
             <br />
 
             <label>
