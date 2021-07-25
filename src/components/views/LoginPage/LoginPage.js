@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
+import Header from '../../../components/views/Header/Header'
+import Footer from '../../../components/views/Footer/Footer'
 
 function LoginPage(props) {
 
@@ -38,6 +40,8 @@ function LoginPage(props) {
   }
 
   return (
+    <>
+    <Header />
     <div style={{
       display: 'flex', justifyContent: 'center', alignItems: 'center',
       width: '100%', height: '100vh'
@@ -50,10 +54,21 @@ function LoginPage(props) {
         <input type="password" value={Password} onChange={onPasswordHandler} />
         <br />
         <button type="submit">
-          Login
+          로그인
+        </button>
+        <button>
+          카카오로 로그인하기
+        </button>
+        <button>
+          네이버로 로그인하기
+        </button>
+        <button>
+          구글로 로그인하기
         </button>
       </form>
     </div>
+    <Footer />
+    </>
   )
 }
 
