@@ -1,6 +1,8 @@
 /* 푸터 */
 .FooterContainer{
   margin-top: 5%;
+  width: 100%;
+  overflow-x:hidden;
 }
 
 #footer {
@@ -65,4 +67,5 @@
 .line {
   margin-top: -15px;
   margin-bottom: 13px;
+  width: 100%;
 }

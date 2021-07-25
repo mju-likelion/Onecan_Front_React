@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* 헤더 */
 .HeaderContainer {
   background-color: #31572E;
-  height: 60px;
+  height: 80px;
   width: 100%;
   margin-top: -1.2%;
 }
@@ -20,6 +21,8 @@ body {
   padding: 1%;
   color: white;
   width: 100%;
+
+  padding-top: 2%;
 }
 
 .auth li {
