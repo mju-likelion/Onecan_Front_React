@@ -4,12 +4,10 @@ import { registerUser } from "../../../_actions/user_action";
 import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
-
 import { Form, Input, Button, } from "antd";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
-
   const [Email, setEmail] = useState("");
   const [Name, setName] = useState("");
   const [Password, setPassword] = useState("");
@@ -68,7 +66,6 @@ function RegisterPage(props) {
       }
     });
   };
-
   useEffect(() => {
     if (Phone.length === 10) {
       setPhone(Phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
@@ -100,7 +97,7 @@ function RegisterPage(props) {
             회원 가입
           </h2>
           <br />
-          <form
+          <Form
             style={{ display: "flex", flexDirection: "column" }}
             onSubmit={onSubmitHandler}
           >
@@ -148,7 +145,7 @@ function RegisterPage(props) {
             type="text"
              value={Address} 
              onChange={onAddressHandler} />
-
+           
             <label>전화번호(콜)</label>
             <Input 
             id ="Phone"
@@ -159,7 +156,10 @@ function RegisterPage(props) {
             <br />
 
             <label>
-              개인정보 수집 및 활용 동의
+              <Button 
+              type="link"
+              style={{color: "green"}}
+              >개인정보 수집 및 활용 동의</Button>
               <input type="checkbox" />
             </label>
             <br />
@@ -171,7 +171,7 @@ function RegisterPage(props) {
             >
               회원 가입
             </Button>
-          </form>
+          </Form>
         </div>
       </div>
 
