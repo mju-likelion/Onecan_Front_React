@@ -93,15 +93,15 @@ function RegisterPage(props) {
           height: "100vh",
         }}
       >
-        <div style={{ paddingTop: 250 }}>
+        <div style={{ paddingTop: 300 }}>
           <br />
-          <h1 style={{ paddingTop: 20 }}>One can do it!</h1>
-          <h2 style={{ display: "flex", justifyContent: "center" }}>
-            회원 가입
+          <h1 style={{ paddingTop: 20, letterSpacing: 10, fontFamily: 'Montserrat', textAlign: 'center'}}>One can do it!</h1>
+          <h2 style={{ display: "flex", justifyContent: "center", fontFamily: 'Montserrat', fontSize: 25, letterSpacing: 5 }}>
+            회원가입
           </h2>
           <br />
           <form
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: "flex", flexDirection: "column", marginLeft: 460, marginRight: 460 }}
             onSubmit={onSubmitHandler}
           >
             <label>이메일(아이디)</label>
@@ -109,8 +109,14 @@ function RegisterPage(props) {
               id="email"
               placeholder="이메일을 입력하세요"
               type="text"
-              value={Email}w
+              value={Email}
               onChange={onEmailHandler}
+              style={{
+                width: 330,
+                height: 30,
+                borderRadius: 9,
+                marginBottom: 15
+              }}
             />
 
             <label>이름</label>
@@ -120,6 +126,10 @@ function RegisterPage(props) {
               type="text"
               value={Name}
               onChange={onNameHandler}
+              style={{
+                borderRadius: 9,
+                marginBottom: 15
+              }}
             />
 
             <label>비밀번호</label>
@@ -129,6 +139,10 @@ function RegisterPage(props) {
               type="password"
               value={Password}
               onChange={onPasswordHandler}
+              style={{
+                borderRadius: 9,
+                marginBottom: 15
+              }}
             />
 
             <label>비밀번호 확인</label>
@@ -138,6 +152,10 @@ function RegisterPage(props) {
               type="password"
               value={ConfirmPassword}
               onChange={onConfirmPasswordHandler}
+              style={{
+                borderRadius: 9,
+                marginBottom: 15
+              }}
             />
             <br />
 
@@ -146,8 +164,12 @@ function RegisterPage(props) {
             id ="Address"
             placeholder="주소를 입력하세요"
             type="text"
-             value={Address} 
-             onChange={onAddressHandler} />
+            value={Address} 
+            onChange={onAddressHandler}
+            style={{
+              borderRadius: 9,
+              marginBottom: 15
+            }} />
 
             <label>전화번호(콜)</label>
             <Input 
@@ -155,7 +177,11 @@ function RegisterPage(props) {
             placeholder="전화번호를 입력하세요"
             type="text" 
             value={Phone} 
-            onChange={onPhoneHandler} />
+            onChange={onPhoneHandler}
+            style={{
+              borderRadius: 9,
+              marginBottom: 15
+            }} />
             <br />
 
             <label>
@@ -167,9 +193,9 @@ function RegisterPage(props) {
             <Button
               type="submit"
               onClick={onSubmitHandler}
-              style={{ color: "green" }}
+              style={{ color: "#31572E", borderRadius: 9}}
             >
-              회원 가입
+              가입하기
             </Button>
           </form>
         </div>
