@@ -1,6 +1,6 @@
 /* 푸터 */
 .FooterContainer{
-  margin-top: 5%;
+  margin-top: 200px;
   width: 100%;
   overflow-x:hidden;
 }
@@ -25,7 +25,7 @@
 
   position: absolute;
   margin-left: 50%;
-  margin-top: 4.2%;
+  margin-top: 3%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -62,6 +62,7 @@
 .email {
   margin-left: 1%;
   margin-top: 0%;
+  letter-spacing: 3px;
 }
 
 .line {

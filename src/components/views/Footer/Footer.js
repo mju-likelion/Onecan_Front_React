@@ -15,7 +15,7 @@ function Footer() {
                 <li>입점문의</li>
               </ul>
               <hr className="line" />
-              <p className="email">E-mail</p>
+              <p className="email">onecandoit!@likelion.org</p>
             </nav>
           </footer>
         </div>
