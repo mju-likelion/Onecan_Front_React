@@ -25,6 +25,8 @@ function UploadRecipePage() {
         setImages(event.currentTarget.value)
       }
 
+  
+
       return (
         <>
           <Header />
@@ -35,7 +37,7 @@ function UploadRecipePage() {
               <div 
               style={{textAlign: 'center', marginBottom: '2rem'}}>
                 <h1 
-                style ={{display:'flex', justifyContent:'start'}}>레시피 업로드</h1>
+                style ={{display:'flex', justifyContent:'start'}}>물물교환 업로드</h1>
               </div>
               <Form style ={{}}>
                   <FileUpload 
