@@ -35,7 +35,7 @@ function UploadRecipePage() {
               <div 
               style={{textAlign: 'center', marginBottom: '2rem'}}>
                 <h1 
-                style ={{display:'flex', justifyContent:'start'}}>레시피 업로드</h1>
+                style ={{display:'flex', justifyContent:'start'}}>레시피 작성</h1>
               </div>
               <Form style ={{}}>
                   <FileUpload 
@@ -62,7 +62,7 @@ function UploadRecipePage() {
                   <br />
                   <label>글 작성</label>
                   <Input 
-                  type ="text"
+                  type ="textarea"
                   placeholder="글 내용을 작성해주세요"
                   style={{ borderRadius: 9, height: 400}} 
                   onChange={descriptionChangeHandler} 

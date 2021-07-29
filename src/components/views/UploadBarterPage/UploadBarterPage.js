@@ -5,8 +5,9 @@ import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';
 
 const {TextArea} = Input;
-function UploadRecipePage() {
+function UploadBarterPage() {
 
+       
       const [Title, setTitle] = useState("")
       const [Hashtag, setHashtag] = useState("")
       const [Description, setDescription] = useState("")
@@ -25,8 +26,6 @@ function UploadRecipePage() {
         setImages(event.currentTarget.value)
       }
 
-  
-
       return (
         <>
           <Header />
@@ -37,7 +36,7 @@ function UploadRecipePage() {
               <div 
               style={{textAlign: 'center', marginBottom: '2rem'}}>
                 <h1 
-                style ={{display:'flex', justifyContent:'start'}}>물물교환 업로드</h1>
+                style ={{display:'flex', justifyContent:'start'}}>물물교환 작성</h1>
               </div>
               <Form style ={{}}>
                   <FileUpload 
@@ -81,5 +80,5 @@ function UploadRecipePage() {
         </>
       )
     }
-
-export default UploadRecipePage
+  
+export default UploadBarterPage;

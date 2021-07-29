@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/uploadrecipe" component={Auth(UploadRecipePage, true)} />
         <Route exact path="/uploadbarter" component={Auth(UploadBarterPage, true)} />
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
+
       </Switch>
     </div>
     </ Router>
