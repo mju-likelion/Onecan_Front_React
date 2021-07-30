@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCartItems } from '../../../_actions/user_action';
 import UserCardBlock from './Sections/UserCardBlock';
@@ -7,6 +7,8 @@ import Footer from "../../../components/views/Footer/Footer";
 
 function CartPage(props){
   const dispatch = useDispatch();
+
+  const [Total, setTotal] = useState(0)
 
   useEffect(() => {
 
@@ -21,9 +23,23 @@ function CartPage(props){
     //     })
 
     //     dispatch(getCartItems(cartItems, props.user.userData.cart))
+    //           .then(response => {calculateTotal(response.payload)})
     //   }
     // }
   }, [])
+  // props.user.userDeta
+
+  // 총 금액 계산하기
+  // 왜인지 모르겠는 오류가 계속 남
+  // let calculateTotal = (cartDetail) = {
+  //     let total = 0;
+
+  //     cartDetail.map(item => {
+  //         total += parseInt(item.price,10) * item.quantity
+  //     })
+
+  //     setTotal(total)
+  // }
 
   return(
     <div>
@@ -36,6 +52,12 @@ function CartPage(props){
         <UserCardBlock />
         {/* 카트 5번째 강의에서 수정하는 내용 추후 참고하기 */}
         {/* <UserCardBlock products={props.user.cartDetail && props.user.cartDetail.product} /> */}
+      </div>
+      <div style={{
+        marginTop: '100px',
+        marginLeft: '240px'
+      }}>
+        <h2>총 금액: {Total}</h2>
       </div>
       <Footer />
     </div>

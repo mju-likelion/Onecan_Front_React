@@ -13,8 +13,8 @@ function UserCardBlock(props){
 
   // 상품 이미지, 수량, 가격, 삭제버튼 렌더링
   const renderItems = () => (
-    props.products && props.product.map(product => (
-      <tr>
+    props.products && props.product.map((product, index) => (
+      <tr key={index}>
         <td>
           <img style={{width: '60px'}} alt="product"
           src={renderCartImage(product.images)} />
