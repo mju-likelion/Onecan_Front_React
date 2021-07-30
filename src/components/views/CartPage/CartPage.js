@@ -13,23 +13,29 @@ function CartPage(props){
     let cartItems = []
 
     // 리덕스 userState 안에 cart 안에 상품이 들어있는지 확인
-    if(props.user.userData && props.user.userData.cart){
-      if(props.user.userData.cart.length > 0){
-        props.user.userData.cart.forEach(item => {
-          cartItems.push(item.id)
-        })
+    // 디비가 없기때문에 불러오지 못해서 일단 주석으로 처리
+    // if(props.user.userData && props.user.userData.cart){
+    //   if(props.user.userData.cart.length > 0){
+    //     props.user.userData.cart.forEach(item => {
+    //       cartItems.push(item.id)
+    //     })
 
-        dispatch(getCartItems(cartItems, props.user.userData.cart))
-      }
-    }
+    //     dispatch(getCartItems(cartItems, props.user.userData.cart))
+    //   }
+    // }
   }, [])
 
   return(
-    <div style={{ width: '1280px'}}>
+    <div>
       <Header />
-      <h1>장바구니</h1>
+      <h1 style={{
+        marginTop: '250px',
+        marginLeft: '220px'
+      }}>장바구니</h1>
       <div>
-        <UserCardBlock products={props.user.cartDetail && props.user.cartDetail.product} />
+        <UserCardBlock />
+        {/* 카트 5번째 강의에서 수정하는 내용 추후 참고하기 */}
+        {/* <UserCardBlock products={props.user.cartDetail && props.user.cartDetail.product} /> */}
       </div>
       <Footer />
     </div>

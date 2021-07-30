@@ -1,7 +1,38 @@
 import React from 'react';
-import 'UserCardBlock.css';
+import "./UserCardBlock.css";
 
 function UserCardBlock(props){
+
+  const renderCartImage = (images) => {
+    if(images.length > 0){
+      // 이미지가 한 개 이상일 경우 첫 번째 이미지를 보여주도록
+      let image = images[0]
+      // return '서버 주소/${image}'
+    }
+  }
+
+  // 상품 이미지, 수량, 가격, 삭제버튼 렌더링
+  const renderItems = () => (
+    props.products && props.product.map(product => (
+      <tr>
+        <td>
+          <img style={{width: '60px'}} alt="product"
+          src={renderCartImage(product.images)} />
+        </td>
+        <td>
+          {product.quantity}
+        </td>
+        <td>
+          {product.price} 원
+        </td>
+        <td>
+          <button>
+            상품삭제
+          </button>
+        </td>
+      </tr>
+    ))
+  )
   return(
     <div>
       <table>
@@ -15,7 +46,7 @@ function UserCardBlock(props){
         </thead>
 
         <tbody>
-
+          {renderItems()}
         </tbody>
 
       </table>
