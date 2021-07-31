@@ -41,6 +41,9 @@ function CartPage(props){
   //     setTotal(total)
   // }
 
+  // 삭제하기 기능 구현 필요
+
+
   return(
     <div>
       <Header />
@@ -58,6 +61,19 @@ function CartPage(props){
         marginLeft: '240px'
       }}>
         <h2>총 금액: {Total}</h2>
+        <button style={{
+          width: '150px',
+          height: '40px',
+          borderRadius: 10,
+          border: 0,
+          fontFamily: 'Montserrat',
+          color: 'white',
+          background: '#6AB04C',
+          cursor: 'pointer',
+          margin: '10px'
+        }}>
+          구매하기
+        </button>
       </div>
       <Footer />
     </div>
