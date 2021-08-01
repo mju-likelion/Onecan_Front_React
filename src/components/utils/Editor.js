@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
-{/* 에디터 적용법 찾는 중*/}
-
 class Editor extends Component{
     constructor(props){
         super(props);
@@ -31,16 +29,18 @@ class Editor extends Component{
       ]
 
     render(){
-        const { value, onChange } = this.props;
+        const { value } = this.props;
+
+
         return(
             <div style={{height: "650px"}}>
                 <ReactQuill 
-                    style={{height: "600px"}} 
+                    style={{height: "600px", borderRadius: 9}} 
                     theme="snow" 
                     modules={this.modules} 
                     formats={this.formats} 
                     value={value || ''} 
-                    onChange={(content, delta, source, editor) => onChange(editor.getHTML())} />
+                   />
             </div>
         )
     }

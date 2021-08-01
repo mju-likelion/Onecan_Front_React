@@ -14,50 +14,27 @@ function ProductInfo(props) {
   }
 
   return (
-    <div>
+    <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginTop:500, marginRight:50, marginLeft:50}}>
       <Descriptions title ="상품 정보" bordered>
-          <Descriptions.Item label="상품명">{props.detail.Name}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="가격">{props.detail.Price}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="판매단위">{props.detail.Sales_Unit}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="포장 타입">{props.detail.Packaging}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="배송 구분">{props.detail.Delivery_Type}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="유통기한">{props.detail.shelf_Life}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="구매 수량">{props.detail.purchase_Quantity}</Descriptions.Item>
-          <br />
-          <br />
-          <Descriptions.Item label="상품 설명">{props.detail.descriptions}</Descriptions.Item>
-          
-      </Descriptions>
-
-
+          <Descriptions.Item label="상품명">1{props.detail.Name}</Descriptions.Item>
+          <Descriptions.Item label="가격">1{props.detail.Price}</Descriptions.Item>
+          <Descriptions.Item label="판매단위">1{props.detail.Sales_Unit}</Descriptions.Item>
+          <Descriptions.Item label="포장 타입">1{props.detail.Packaging}</Descriptions.Item>
+          <Descriptions.Item label="배송 구분">1{props.detail.Delivery_Type}</Descriptions.Item>
+          <Descriptions.Item label="유통기한">1{props.detail.shelf_Life}</Descriptions.Item>
+          <Descriptions.Item label="구매 수량">1{props.detail.purchase_Quantity}</Descriptions.Item>
+          <Descriptions.Item label="상품 설명">1{props.detail.descriptions}</Descriptions.Item>
+          </Descriptions>
+      <br />
+      <div style ={{display: 'flex', justifyContent: 'center'}}>
+            <button 
+            size="large" 
+            className="ToCart"
+            onClick={clickHandler}>상품 담기
+            </button>
+          </div>
       <br />
       <br />
-      <br />
-
-      <div style ={{displat: 'flex', justifyContent: 'center'}}>
-          <Button size="large" shape="round" type="danger" onClick={clickHandler}>
-            카트에 담기
-          </Button>
-      </div>
-
-
-
-
-
-
-
     </div>
   )
 }

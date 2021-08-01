@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
-import  './image.css'
+import  './Detail.css'
 
 function ProductImage(props) {
 
@@ -37,7 +37,7 @@ function ProductImage(props) {
   ];
 
   return (
-    <div>
+    <div style={{marginTop:400, marginLeft:350}}>
       <ImageGallery items={images} />
     </div>
   )
