@@ -31,16 +31,16 @@ function CartPage(props){
 
   // 총 금액 계산하기
   // 왜인지 모르겠는 오류가 계속 남
-  // let calculateTotal = (cartDetail) = {
-  //     let total = 0;
+//   let calculateTotal = (cartDetail) = {
+//       let total = 0;
 
-  //     cartDetail.map(item => {
-  //         total += parseInt(item.price,10) * item.quantity
-  //     })
+//       cartDetail.map(item => {
+//           total += parseInt(item.price,10) * item.quantity
+//       })
 
-  //     setTotal(total)
-  // }
-
+//       setTotal(total)
+//   }
+// }
   // 삭제하기 기능 구현 필요
 
 
