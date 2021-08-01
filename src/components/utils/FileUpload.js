@@ -45,9 +45,12 @@ import {Button} from 'antd';
           <header className = "side-header">
           </header>
           <div style = {{padding : 10}}>
-            <Button onClick = {handleFileButtonClick} style={{ borderRadius: 9}}>
-              대표 사진 올리기
-              </Button>
+            <button 
+            className="UploadButton"
+            onClick = {handleFileButtonClick} 
+            style={{ borderRadius: 9}}>
+              <p className="recipeImgPostText">대표 이미지 선택</p>
+              </button>
           </div>
         </aside>
       </>

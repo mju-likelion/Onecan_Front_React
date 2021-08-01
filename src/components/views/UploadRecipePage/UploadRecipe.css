@@ -1,0 +1,71 @@
+.UploadRecipeContainer {
+  background-color: #FFFFFF;
+
+}
+
+/*대표사진업로드버튼*/
+.UploadButton {
+/* Rectangle 14 */
+width: 122px;
+height: 39px;
+left: 750px;
+top: 1129px;
+background: #FFFFFF;
+border-radius: 30px;
+border-block-end-color: #6AB04C;
+border-color: #6AB04C
+
+
+}
+
+.recipeImgPostText {
+  padding-top: 6px;
+padding-left: px;
+color: #6AB04C;
+}
+
+/*글 내용 작성 틀*/
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+
+
+
+/*작성완료 버튼 */
+
+.recipePostButton {
+  /* Rectangle 14 */
+position: absolute;
+width: 122px;
+height: 39px;
+left: 750px;
+top: 1129px;
+background: #FFFFFF;
+border-radius: 30px;
+border-block-end-color: #6AB04C;
+border-color: #6AB04C
+
+}
+
+.recipepostText {
+padding-top: 6px;
+padding-left: 3px;
+color: #6AB04C;
+}

@@ -23,22 +23,19 @@ function ProductInfo(props) {
           <br />
           <br />
           <Descriptions.Item label="판매단위">{props.detail.Sales_Unit}</Descriptions.Item>
-          <br />
-          <br />
           <Descriptions.Item label="포장 타입">{props.detail.Packaging}</Descriptions.Item>
-          <br />
-          <br />
           <Descriptions.Item label="배송 구분">{props.detail.Delivery_Type}</Descriptions.Item>
-          <br />
-          <br />
           <Descriptions.Item label="유통기한">{props.detail.shelf_Life}</Descriptions.Item>
-          <br />
-          <br />
           <Descriptions.Item label="구매 수량">{props.detail.purchase_Quantity}</Descriptions.Item>
-          <br />
-          <br />
           <Descriptions.Item label="상품 설명">{props.detail.descriptions}</Descriptions.Item>
-          
+          <div style ={{displat: 'flex', justifyContent: 'center'}}>
+          <button 
+          size="large" 
+          className="ToCart"
+           onClick={clickHandler}>
+            카트에 담기
+          </button>
+           </div>
       </Descriptions>
 
 
@@ -46,11 +43,7 @@ function ProductInfo(props) {
       <br />
       <br />
 
-      <div style ={{displat: 'flex', justifyContent: 'center'}}>
-          <Button size="large" shape="round" type="danger" onClick={clickHandler}>
-            카트에 담기
-          </Button>
-      </div>
+      
 
 
 

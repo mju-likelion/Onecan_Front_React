@@ -22,6 +22,7 @@ function DetailProductPage(props) {
       
       <br />
       <Row gutter={[16, 16]} > 
+        <Header />
 
         <Col lg={12} sm={24}>
           {/* ProductImage*/ }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
-import  './image.css'
+import  './Detail.css'
 
 function ProductImage(props) {
 
