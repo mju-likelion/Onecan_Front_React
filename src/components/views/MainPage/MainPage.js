@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
-import Header from '../../../components/views/Header/Header';
-import Footer from '../../../components/views/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
-function LandingPage(props) {
+function MainPage(props) {
 
     useEffect(() => {
       axios.get('/api/hello')
@@ -40,5 +40,5 @@ function LandingPage(props) {
     )
   }
 
-export default withRouter(LandingPage)
+export default withRouter(MainPage)
 
