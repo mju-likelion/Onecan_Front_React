@@ -11,19 +11,17 @@ function DetailProductPage(props) {
 
 
   const [Product, setProduct] = useState({})
-//이 부분에서 백이랑 연관되는 코드가 더 필요하지만 오류 떠서 일단 빼 뒀음(추후 추가)
+//이 부분에서 연관되는 코드가 더 필요하지만 오류 떠서 일단 빼 뒀음(추후 추가)
 
   return (
     <div 
     style={{width: "100%", height: "100vh" }}>
-      <div style = {{display: 'flex', justifyContent: 'center'}}>
+      <div style = {{display: 'flex', justifyContent: 'flex-start'}}>
+        <Header />
         {/*<h1>상품 디테일 </h1>*/ }
       </div> 
-      
       <br />
       <Row gutter={[16, 16]} > 
-        <Header />
-
         <Col lg={12} sm={24}>
           {/* ProductImage*/ }
           <ProductImage detail = {Product} />

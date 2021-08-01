@@ -37,7 +37,7 @@ function ProductImage(props) {
   ];
 
   return (
-    <div>
+    <div style={{marginTop:400, marginLeft:350}}>
       <ImageGallery items={images} />
     </div>
   )
