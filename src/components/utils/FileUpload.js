@@ -11,7 +11,7 @@ import {Button} from 'antd';
 
     useEffect(() => {
       if(file !== '') //처음 파일 등록하지 않았을 때를 방지
-        setPreview(<img className='img_preview' src={previewURL}></img>);
+        setPreview(<img className='img_preview' src={previewURL} style={{width:"40rem", height:"30rem"}}></img>);
       return () => {
       }
     }, [previewURL])

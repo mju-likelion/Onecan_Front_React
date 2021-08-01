@@ -49,11 +49,12 @@ function UploadBarterPage() {
                 <h1 
                 style ={{display:'flex', justifyContent:'start'}}>레시피 작성</h1>
               </div>
-              <Form style ={{}}>
-                      <FileUpload 
+              <FileUpload 
                       style={{ borderRadius: 9}} 
                       onChange={imagesChangeHandler} 
                       value={Images}/>
+              <Form style ={{}}>
+                     
                   <br />
                   <br />
                   <label>글 제목</label>
@@ -81,12 +82,13 @@ function UploadBarterPage() {
                       </Editor>
                   <br />
                   <br />
+                  
               </Form>
               <button 
-              className="recipePostButton"
-              style={{ borderRadius: 9, marginTop: 265, marginLeft:605}}>
-                    <p className="recipepostText">작성 완료</p>
-                  </button>
+                className="recipePostButton"
+                style={{ borderRadius: 9, marginTop: 20, marginLeft:580}}>
+                      <p className="recipepostText">작성 완료</p>
+              </button>
       <>
       </>
               </div>

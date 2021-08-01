@@ -84,7 +84,7 @@ function UploadRecipePage() {
               </Form>
               <button 
               className="recipePostButton"
-              style={{ borderRadius: 9, marginTop: 265, marginLeft:605}}>
+              style={{ borderRadius: 9, marginTop: 20, marginLeft:580}}>
                     <p className="recipepostText">작성 완료</p>
                   </button>
       <>
