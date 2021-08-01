@@ -14,20 +14,25 @@ function Header() {
   const onClickFQ = (e) => {
     document.location.href = "/f&q";
   };
+
+  const onClickMain = (e) => {
+    document.location.href = '/';
+  };
+
   return (
     <>
       {/* 헤더 */}
       <header className="HeaderContainer">
         <div className="auth">
           <ul>
-            <li onClick={onClickLogin}>로그인</li>
-            <li onClick={onClickJoin}>회원가입</li>
-            <li onClick={onClickFQ}>F&Q</li>
+            <li onClick={onClickLogin} style={{cursor: 'pointer'}}>로그인</li>
+            <li onClick={onClickJoin}  style={{cursor: 'pointer'}}>회원가입</li>
+            <li onClick={onClickFQ}  style={{cursor: 'pointer'}}>F&Q</li>
           </ul>
         </div>
 
         <div className="title_search">
-          <div className="title">One can do it!</div>
+          <div className="title" onClick={onClickMain} style={{cursor: 'pointer'}}>One can do it!</div>
           <div className="search">
             <input placeholder="검색어를 입력하세요"></input>
           </div>

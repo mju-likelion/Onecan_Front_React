@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
+import {Button, Form, Input} from 'antd';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import {withRouter} from 'react-router-dom';
@@ -52,7 +53,7 @@ function LoginPage(props) {
           onSubmit={onSubmitHandler}>
         <p style={{ fontSize: 40, fontFamily: 'Montserrat', textAlign: 'center'}}>Login</p>
         <label style={{ fontSize: 20, fontFamily: 'Montserrat'}}>ID</label>
-        <input 
+        <Input 
            type="email" 
            value={Email} 
            onChange={onEmailHandler} 
@@ -64,7 +65,7 @@ function LoginPage(props) {
         <label style={{
            fontSize: 20, 
            fontFamily: 'Montserrat'}}>PW</label>
-        <input 
+        <Input 
           type="password" 
           value={Password} 
           onChange={onPasswordHandler} 
@@ -82,7 +83,8 @@ function LoginPage(props) {
             color: 'white',
             borderRadius: 9,
             marginTop: 10,
-            border: 0
+            border: 0,
+            cursor: 'pointer'
           }}>
           로그인
         </button>

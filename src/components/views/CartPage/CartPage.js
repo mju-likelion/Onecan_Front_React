@@ -31,15 +31,18 @@ function CartPage(props){
 
   // 총 금액 계산하기
   // 왜인지 모르겠는 오류가 계속 남
-  // let calculateTotal = (cartDetail) = {
-  //     let total = 0;
+//   let calculateTotal = (cartDetail) = {
+//       let total = 0;
 
-  //     cartDetail.map(item => {
-  //         total += parseInt(item.price,10) * item.quantity
-  //     })
+//       cartDetail.map(item => {
+//           total += parseInt(item.price,10) * item.quantity
+//       })
 
-  //     setTotal(total)
-  // }
+//       setTotal(total)
+//   }
+// }
+  // 삭제하기 기능 구현 필요
+
 
   return(
     <div>
@@ -58,6 +61,19 @@ function CartPage(props){
         marginLeft: '240px'
       }}>
         <h2>총 금액: {Total}</h2>
+        <button style={{
+          width: '150px',
+          height: '40px',
+          borderRadius: 10,
+          border: 0,
+          fontFamily: 'Montserrat',
+          color: 'white',
+          background: '#6AB04C',
+          cursor: 'pointer',
+          margin: '10px'
+        }}>
+          구매하기
+        </button>
       </div>
       <Footer />
     </div>
