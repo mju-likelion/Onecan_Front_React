@@ -1,0 +1,16 @@
+table{
+  font-family: Montserrat;
+  border-collapse: collapse;
+  width: 1000px;
+  margin-left: 220px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){
+  background-color: white;
+}
