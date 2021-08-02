@@ -19,6 +19,10 @@ function Header() {
     document.location.href = '/';
   };
 
+  const onClickCart = (e) => {
+    document.location.href = '/cart';
+  };
+
   return (
     <>
       {/* 헤더 */}
@@ -44,7 +48,7 @@ function Header() {
               <li>Best</li>
               <li>Sale</li>
               <li>커뮤니티</li>
-              <li>장바구니</li>
+              <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
             </ul>
           </div>
         </div>
