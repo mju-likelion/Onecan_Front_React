@@ -52,6 +52,9 @@ function CartPage(props){
       })
   }
 
+  const onClickMain = (e) => {
+    document.location.href = "/";
+  };
 
 
   return(
@@ -86,10 +89,20 @@ function CartPage(props){
         </Button>
         </div>
         :
-        <h3 style={{
-          textAlign: 'center',
-          margin: '30px'
-        }}>장바구니에 담긴 상품이 없습니다 :)</h3>
+        <div>
+          <h3 style={{
+            textAlign: 'center',
+            margin: '30px'
+          }}>장바구니에 담긴 상품이 없습니다 :)</h3>
+          <p
+            onClick={onClickMain}
+            style={{
+              textAlign: 'center',
+              fontFamily: 'Montserrat',
+              fontSize: '15px',
+              cursor: 'pointer'
+            }}>One can do it! 구경하러 가기</p>
+        </div>
       }
       <Footer />
     </div>
