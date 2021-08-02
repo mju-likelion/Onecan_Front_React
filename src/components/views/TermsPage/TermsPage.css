@@ -1,0 +1,37 @@
+.terms_head {
+  margin-top: 250px;
+  text-align: center;
+
+  font-family: Montserrat;
+  color: #000000;
+  font-size: 1.5rem;
+
+  font-style: normal;
+  font-weight: normal;
+
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.terms_body {
+  padding: 30px 100px;
+  line-height: 1.5;
+
+  font-family: Montserrat;
+  color: #000000;
+  font-size: 1.5rem;
+
+  font-style: normal;
+  font-weight: normal;
+
+  text-align: center;
+  letter-spacing: 0.3em;
+
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+.terms_text{
+  font-size: 22px;
+  font-family: Montserrat;
+}

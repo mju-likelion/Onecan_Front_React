@@ -11,6 +11,8 @@ import DetailProductPage from "./components/views/DetailProductPage/DetailProduc
 import ListRecipePage from './components/views/ListRecipePage/ListRecipePage';
 import ListObjPage from './components/views/ListObjPage/ListObjMainPage';
 import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
+import TermsPage from "./components/views/TermsPage/TermsPage";
+import InfoPage from "./components/views/InfoPage/InfoPage";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
         <Route exact path="/listobj" component={Auth(ListObjPage, null)} /> 
         <Route exact path="/listbarter" component={Auth(ListBarterPage, null)} /> 
+        <Route exact path="/terms" component={Auth(TermsPage, true)} />
+        <Route exact path="/information" component={Auth(InfoPage, true)} />
 
       </Switch>
     </div>

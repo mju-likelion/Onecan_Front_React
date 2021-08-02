@@ -1,5 +1,6 @@
 import React from 'react';
 import "./UserCardBlock.css";
+import {Button} from 'antd';
 
 function UserCardBlock(props){
 
@@ -26,9 +27,9 @@ function UserCardBlock(props){
           {product.price} 원
         </td>
         <td>
-          <button>
+          <Button OnClick={() => props.removeItem(product._id)}>
             상품삭제
-          </button>
+          </Button>
         </td>
       </tr>
     ))
