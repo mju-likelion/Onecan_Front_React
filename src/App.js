@@ -7,7 +7,8 @@ import Auth from './hoc/auth'
 import UploadRecipePage from './components/views/UploadRecipePage/UploadRecipePage'
 import UploadBarterPage from './components/views/UploadBarterPage/UploadBarterPage'
 import CartPage from './components/views/CartPage/CartPage';
-import DetailProductPage from "./components/views/DetailProductPage/DetailProductPage"
+import DetailProductPage from "./components/views/DetailProductPage/DetailProductPage";
+import TermsPage from "./components/views/TermsPage/TermsPage";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/uploadbarter" component={Auth(UploadBarterPage, true)} />
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
         <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} /> 
+        <Route exact path="/terms" component={Auth(TermsPage, true)} />
 
       </Switch>
     </div>
