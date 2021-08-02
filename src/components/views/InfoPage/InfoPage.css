@@ -1,0 +1,125 @@
+.contents {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contents .title_list {
+  width: 878px;
+  margin: 0 auto;
+  font-family: 'Montserrat';
+}
+
+.contents .title_list .title_one {
+  text-align: center;
+}
+
+.contents .title_list .title_one h1 {
+  margin-top: 230px;
+  margin-left: -50px;
+  font-size: 55px;
+  line-height: 2;
+}
+
+.contents .title_list .title_two {
+  text-align: center;
+}
+
+.contents .title_list .title_two h1 {
+  margin-top: -50px;
+  margin-left: 90px;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+
+/* 이용약관 리스트 */
+.service_wrap{
+  align-items: center;
+  margin-right: 100px;
+}
+
+.market {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  color: #31572E;
+  font-family: Montserrat;
+}
+
+.market .market_service {
+  width: 800px;
+  height: 380px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+}
+
+.market_content{
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 3%;
+  color: black;
+}
+.community {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-family: Montserrat;
+  color: #31572E;
+}
+
+
+.service_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 349px;
+}
+
+.community_service {
+  width: 800px;
+  height: 380px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+}
+
+.community_content{
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-top: 2%;
+  margin-left: 3%;
+  color: black;
+}
+
+.utilize {
+  display: flex;
+  justify-content: center;
+  color: #31572E;
+  font-family: Montserrat;
+}
+
+.utilize_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 349px;
+  margin-top: -60px;
+}
+
+.utilize_service {
+  width: 800px;
+  height: 200px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+}
+
+.utilize_content{
+  font-family: Montserrat;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 3%;
+  color: black;
+}

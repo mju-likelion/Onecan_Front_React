@@ -9,6 +9,7 @@ import UploadBarterPage from './components/views/UploadBarterPage/UploadBarterPa
 import CartPage from './components/views/CartPage/CartPage';
 import DetailProductPage from "./components/views/DetailProductPage/DetailProductPage";
 import TermsPage from "./components/views/TermsPage/TermsPage";
+import InfoPage from "./components/views/InfoPage/InfoPage";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
         <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} /> 
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
+        <Route exact path="/information" component={Auth(InfoPage, true)} />
 
       </Switch>
     </div>
