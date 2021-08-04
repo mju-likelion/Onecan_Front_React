@@ -1,13 +1,2 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-.ToCart {
-  position: absolute;
-  width: 134px;
-  height: 39px;
-  left: 719px;
-  top: 810px;
-
-  background: linear-gradient(275.76deg, #6AB04C 45.06%, #BADC58 99.29%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}

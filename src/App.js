@@ -8,12 +8,11 @@ import UploadRecipePage from './components/views/UploadRecipePage/UploadRecipePa
 import UploadBarterPage from './components/views/UploadBarterPage/UploadBarterPage';
 import CartPage from './components/views/CartPage/CartPage';
 import DetailProductPage from "./components/views/DetailProductPage/DetailProductPage";
-import ListRecipePage from './components/views/ListRecipePage/ListRecipePage';
-import ListObjPage from './components/views/ListObjPage/ListObjMainPage';
-import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
 import TermsPage from "./components/views/TermsPage/TermsPage";
 import InfoPage from "./components/views/InfoPage/InfoPage";
-
+import ListRecipePage from './components/views/ListRecipePage/ListRecipePage';
+import ListObjBestPage from './components/views/ListObjPage/ListObjBestPage';
+import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
         <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} /> 
         <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
-        <Route exact path="/listobj" component={Auth(ListObjPage, null)} /> 
+        <Route exact path="/listobj" component={Auth(ListObjBestPage, null)} /> 
         <Route exact path="/listbarter" component={Auth(ListBarterPage, null)} /> 
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
