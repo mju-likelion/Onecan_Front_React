@@ -1,4 +1,5 @@
 import React from "react";
+import { Menu, Dropdown } from 'antd';
 import "./Header.css";
 
 function Header() {
@@ -23,6 +24,17 @@ function Header() {
     document.location.href = '/cart';
   };
 
+  const menu = (
+    <Menu>
+      <Menu.Item>
+          레시피
+      </Menu.Item>
+      <Menu.Item>
+          물물교환
+      </Menu.Item>
+    </Menu>
+  );
+  
   return (
     <>
       {/* 헤더 */}
@@ -47,8 +59,14 @@ function Header() {
               <li>전체 카테고리</li>
               <li>Best</li>
               <li>Sale</li>
-              <li>커뮤니티</li>
               <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
+              <li>
+              <Dropdown overlay={menu}>
+                <li>
+                  커뮤니티
+                </li>
+              </Dropdown>
+              </li>
             </ul>
           </div>
         </div>
@@ -58,3 +76,25 @@ function Header() {
 }
 
 export default Header;
+
+// import { Menu, Dropdown } from 'antd';
+// import { DownOutlined } from '@ant-design/icons';
+
+// const menu = (
+//   <Menu>
+//     <Menu.Item>
+//       <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+//         1st menu item
+//       </a>
+//     </Menu.Item>
+//   </Menu>
+// );
+
+// ReactDOM.render(
+//   <Dropdown overlay={menu}>
+//     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+//       Hover me <DownOutlined />
+//     </a>
+//   </Dropdown>,
+//   mountNode,
+// );
