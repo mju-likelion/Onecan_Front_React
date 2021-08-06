@@ -85,8 +85,8 @@ function Header(props) {
               <li>Sale</li>
               <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
               <li>
-              <Dropdown overlay={menu}>
-                <li>
+              <Dropdown overlay={menu} style={{cursor: 'pointer'}}>
+                <li style={{cursor: 'pointer'}}>
                   커뮤니티
                 </li>
               </Dropdown>
