@@ -4,7 +4,7 @@ import { Col, Card, Row, Carousel, Button} from 'antd';
 import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
-import CheckBox from '../../views/ListObjPage/Sections/CheckBox';
+import CheckBox from '../../views/ListSearchPage/Sections/CheckBox';
 import {Continents} from './Sections/Datas'; //price 주석 처리 상태, 체크박스
 import Checkbox from './Sections/CheckBox';
 import Radiobox from './Sections/RadioBox';
@@ -70,9 +70,8 @@ function ListObjBestPage() {
   }
 
   const renderCards = Products.map((product, index) => {
-      
 
-      return <Col lg={6} md={8} xs={24} key={index}>4
+      return <Col lg={6} md={8} xs={24} key={index}>
           <Card
               cover={<a href={`/product/${product._id}`} ><ImageSlider images={product.images} /></a>}
           >
@@ -83,8 +82,6 @@ function ListObjBestPage() {
           </Card>
       </Col>
   })
-
-  
 
   const showFilteredResults = (filters) => {
 
@@ -146,8 +143,10 @@ function ListObjBestPage() {
 
   return (
       <div style={{ width: '75%', margin: '3rem auto' }}>
+
           <div style={{ textAlign: 'center' }}>
-              <h2>BEST</h2>
+              <h2>- 에 대한 검색 결과입니다.</h2>
+              <hr />
           </div>
 
           {/* Filter */}

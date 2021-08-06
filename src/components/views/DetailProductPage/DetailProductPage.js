@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import axios from "axios";
 import ProductImage from './Sections/ProductImage';
 import ProductInfo from './Sections/ProductInfo';
 import { Row, Col } from 'antd';
-import '../../views/DetailProductPage/Sections/Detail.css'
+import '../../views/DetailProductPage/Sections/Detail.css';
+import Header from '../../../components/views/Header/Header';
+import Footer from '../../../components/views/Footer/Footer';
 
 function DetailProductPage(props) {
 
@@ -27,7 +29,6 @@ function DetailProductPage(props) {
             </div>
 
             <br />
-
             <Row gutter={[16, 16]} >
                 <Col lg={12} sm={24}>
                     {/* ProductImage */}

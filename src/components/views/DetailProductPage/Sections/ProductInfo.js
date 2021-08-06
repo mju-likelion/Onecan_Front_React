@@ -2,6 +2,7 @@ import React from 'react';
 import { Descriptions, Button } from 'antd';
 import {useDispatch} from 'react-redux';
 import { addToCart } from '../../../../_actions/user_action';
+import axios from "axios";
 
 function ProductInfo(props) {
     const dispatch = useDispatch();
