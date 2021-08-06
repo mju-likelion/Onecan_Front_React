@@ -145,9 +145,10 @@ function ListObjBestPage() {
   }
 
   return (
-      <div style={{ width: '75%', margin: '3rem auto' }}>
-          <div style={{ textAlign: 'center' }}>
-              <h2>SALE</h2>
+      <div>
+          <Header />
+          <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
+              <h1>SALE</h1>
           </div>
 
           {/* Filter */}
@@ -175,9 +176,9 @@ function ListObjBestPage() {
 
           {/* Cards */}
 
-          <Row gutter={[16, 16]} >
+          
               {renderCards}
-          </Row>
+
 
           <br />
 
@@ -201,7 +202,9 @@ function ListObjBestPage() {
                   <button onClick={loadMoreHanlder}>상품더보기</button>
               </div>
           }
+        <Footer />
       </div>
+     
   )
 }
 

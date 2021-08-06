@@ -145,9 +145,11 @@ function ListObjBestPage() {
   }
 
   return (
-      <div style={{ width: '75%', margin: '3rem auto' }}>
-          <div style={{ textAlign: 'center' }}>
-              <h2>BEST</h2>
+      <>
+      <Header />
+      <div style={{  }}>
+          <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
+              <h1>BEST</h1>
           </div>
 
           {/* Filter */}
@@ -175,9 +177,8 @@ function ListObjBestPage() {
 
           {/* Cards */}
 
-          <Row gutter={[16, 16]} >
               {renderCards}
-          </Row>
+
 
           <br />
 
@@ -202,6 +203,8 @@ function ListObjBestPage() {
               </div>
           }
       </div>
+      <Footer />
+      </>
   )
 }
 

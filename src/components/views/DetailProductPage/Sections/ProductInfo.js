@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Descriptions, Button } from 'antd';
 import {useDispatch} from 'react-redux';
 import { addToCart } from '../../../../_actions/user_action';
 import axios from "axios";
+import Count from '../../../utils/Count';
 
 function ProductInfo(props) {
     const dispatch = useDispatch();
@@ -13,21 +14,33 @@ function ProductInfo(props) {
 
   }
 
+  const [ObjName, setObjName] = useState('')
+  const [ObjPrice, setObjPrice] = useState('')
+  const [ObjUnit, setObjUnit] = useState('')
+  const [ObjPackagingType, setObjPackagingType] = useState('')
+  const [ObjDeliveryType, setObjDeliveryType] = useState('')
+  const [ShelfLife, setShelfLife] = useState('')
+  const [PurchaseQuantity, setPurchaseQuantity] = useState('')
+
   return (
-    <div>
-      <Descriptions style={{marginLeft: "0px"}} title ="상품 정보" bordered>
-          <Descriptions.Item label="상품명">1{/*{props.detail.Name}*/}</Descriptions.Item>
-          <Descriptions.Item label="가격">1{/*{props.detail.Price}*/}</Descriptions.Item>
-          <Descriptions.Item label="판매단위">1{/*{props.detail.Sales_Unit}*/}</Descriptions.Item>
-          <Descriptions.Item label="포장 타입">1{/*{props.detail.Packaging}*/}</Descriptions.Item>
-          <Descriptions.Item label="배송 구분">1{/*{props.detail.Delivery_Type}*/}</Descriptions.Item>
-          <Descriptions.Item label="유통기한">1{/*{props.detail.shelf_Life}*/}</Descriptions.Item>
-          <Descriptions.Item label="구매 수량">1{/*{props.detail.purchase_Quantity}*/}</Descriptions.Item>
-          <Descriptions.Item label="상품 설명">1{/*{props.detail.descriptions}*/}</Descriptions.Item>
-      </Descriptions>
+    <div style={{ }}>
+      <h1>표시 {ObjName}</h1>
+      <h2>표시 {ObjPrice}</h2>
       <br />
+      <p>판매 단위 : {ObjUnit}</p>
+      <p>포장 타입 : {ObjPackagingType}</p>
+      <p>배송 구분 : {ObjDeliveryType}</p>
+      <p>유통기한 : {ShelfLife}</p>
+      <p>구매 수량 : {PurchaseQuantity}<Count /></p>
+      
+      <br />
+      <br />
+      <br />
+      <br />
+
       <div style ={{display: 'flex', justifyContent: 'center'}}>
             <button 
+            style={{cursor: 'pointer'}}
             size="large" 
             className="ToCart"
             onClick={clickHandler}>상품 담기
