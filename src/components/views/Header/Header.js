@@ -28,6 +28,14 @@ function Header(props) {
     document.location.href = '/cart';
   };
 
+  const onClickBest = (e) => {
+    document.location.href = '/listobjbest';
+  }
+
+  const onClickSale = (e) => {
+    document.location.href = '/listobjsale';
+  }
+
   // 로그아웃
   const onClickLogout = () => {
     axios.get('/api/users/logout')
@@ -81,8 +89,8 @@ function Header(props) {
           <div className="category_list">
             <ul>
               <li>전체 카테고리</li>
-              <li>Best</li>
-              <li>Sale</li>
+              <li onClick={onClickBest} style={{cursor: 'pointer'}}>BEST</li>
+              <li onClick={onClickSale} style={{cursor: 'pointer'}}>SALE</li>
               <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
               <li>
               <Dropdown overlay={menu} style={{cursor: 'pointer'}}>
