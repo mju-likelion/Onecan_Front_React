@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 import { Menu, Dropdown } from 'antd';
 import "./Header.css";
 
-function Header() {
+function Header(props) {
+
+  const [ShowLogin, setShowLogin] = useState(false)
+
   const onClickLogin = (e) => {
     // 로그인 페이지로 이동
     document.location.href = "/login";
@@ -24,6 +28,22 @@ function Header() {
     document.location.href = '/cart';
   };
 
+  // 로그아웃
+  const onClickLogout = () => {
+    axios.get('/api/users/logout')
+        .then(response => {
+            if (response.data.success) {
+              // '로그인'을 보여줘야함
+                props.history.push("/login")
+                setShowLogin(true)
+            } else {
+              // '로그아웃'을 보여줘야함
+              alert('로그아웃에 실패하였습니다.')
+              setShowLogin(false)
+            }
+        })
+  }
+
   const menu = (
     <Menu>
       <Menu.Item>
@@ -41,7 +61,11 @@ function Header() {
       <header className="HeaderContainer">
         <div className="auth">
           <ul>
-            <li onClick={onClickLogin} style={{cursor: 'pointer'}}>로그인</li>
+            {ShowLogin ?
+              <li onClick={onClickLogout} style={{cursor: 'pointer'}}>로그아웃</li>
+              :
+              <li onClick={onClickLogin} style={{cursor: 'pointer'}}>로그인</li>
+            }
             <li onClick={onClickJoin}  style={{cursor: 'pointer'}}>회원가입</li>
             <li onClick={onClickFQ}  style={{cursor: 'pointer'}}>F&Q</li>
           </ul>
@@ -61,8 +85,8 @@ function Header() {
               <li>Sale</li>
               <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
               <li>
-              <Dropdown overlay={menu}>
-                <li>
+              <Dropdown overlay={menu} style={{cursor: 'pointer'}}>
+                <li style={{cursor: 'pointer'}}>
                   커뮤니티
                 </li>
               </Dropdown>
@@ -76,25 +100,3 @@ function Header() {
 }
 
 export default Header;
-
-// import { Menu, Dropdown } from 'antd';
-// import { DownOutlined } from '@ant-design/icons';
-
-// const menu = (
-//   <Menu>
-//     <Menu.Item>
-//       <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-//         1st menu item
-//       </a>
-//     </Menu.Item>
-//   </Menu>
-// );
-
-// ReactDOM.render(
-//   <Dropdown overlay={menu}>
-//     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-//       Hover me <DownOutlined />
-//     </a>
-//   </Dropdown>,
-//   mountNode,
-// );
