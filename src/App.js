@@ -13,6 +13,8 @@ import InfoPage from "./components/views/InfoPage/InfoPage";
 import ListRecipePage from './components/views/ListRecipePage/ListRecipePage';
 import ListObjBestPage from './components/views/ListObjPage/ListObjBestPage';
 import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
+import ListSearchPage from './components/views/ListSearchPage/ListSearchPage';
+import ListObjSalePage from './components/views/ListObjPage/ListObjSalePage';
 
 function App() {
   return (
@@ -28,10 +30,13 @@ function App() {
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
         <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} /> 
         <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
-        <Route exact path="/listobj" component={Auth(ListObjBestPage, null)} /> 
+        <Route exact path="/listobjbest" component={Auth(ListObjBestPage, null)} /> 
+        <Route exact path="/listobjsale" component={Auth(ListObjSalePage, null)} /> 
         <Route exact path="/listbarter" component={Auth(ListBarterPage, null)} /> 
+        <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} /> 
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
+        
 
       </Switch>
     </div>

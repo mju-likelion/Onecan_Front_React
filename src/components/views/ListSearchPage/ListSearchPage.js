@@ -149,7 +149,7 @@ function ListObjBestPage() {
       <Header />
       <div style={{  }}>
           <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
-              <h1>BEST</h1>
+              <h1>--에 대한 검색 결과입니다.</h1>
           </div>
 
           {/* Filter */}
@@ -186,7 +186,7 @@ function ListObjBestPage() {
           <h3 style={{
             textAlign: 'center',
             margin: '30px'
-          }}>현재 진열된 상품이 없습니다 :)</h3>
+          }}>현재 검색된 상품이 없습니다 :)</h3>
           <p
             onClick={onClickMain}
             style={{

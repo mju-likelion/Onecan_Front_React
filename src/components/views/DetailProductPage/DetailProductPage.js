@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import axios from "axios";
 import ProductImage from './Sections/ProductImage';
 import ProductInfo from './Sections/ProductInfo';
 import { Row, Col } from 'antd';
-import '../../views/DetailProductPage/Sections/Detail.css'
+import '../../views/DetailProductPage/Sections/Detail.css';
+import Header from '../../../components/views/Header/Header';
+import Footer from '../../../components/views/Footer/Footer';
 
 function DetailProductPage(props) {
 
@@ -20,25 +22,27 @@ function DetailProductPage(props) {
     }, [])  */}
 
     return (
-        <div style={{ width: '100%', padding: '3rem 4rem' }}>
+        <>
+        <Header />
+        <div style={{ width: '100%', padding: '3rem 6rem' }}>
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <h1>{Product.title}</h1>
             </div>
-
             <br />
-
-            <Row gutter={[16, 16]} >
-                <Col lg={12} sm={24}>
+                    
                     {/* ProductImage */}
+                    <div style={{width:'38%', marginTop:'20%', marginLeft:'100px'}}>
                     <ProductImage detail={Product} />
-                </Col>
-                <Col lg={12} sm={24}>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-28%', marginLeft:'30%' }}>
                     {/* ProductInfo */}
                     <ProductInfo detail={Product} />
-                </Col>
-            </Row>
+                    </div>
         </div>
+        <Footer />
+        </>
+        
     )
 }
 
