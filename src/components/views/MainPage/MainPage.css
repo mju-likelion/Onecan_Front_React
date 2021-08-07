@@ -1,3 +1,36 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.ToCart {
+width: 134px;
+height: 39px;
+left: 719px;
+top: 810px;
+
+background: linear-gradient(275.76deg, #63a347 45.06%, #afce53 99.29%);
+box-shadow: 0px 4px 4px rgba(255, 243, 243, 0.25);
+border-radius: 10px;
+border:none;
+outline:none;
+}
+
+.ToCartText {
+  margin-top: 6px;
+  color: white;
+  font-weight:normal;
+  font-family: Montserrat;
+}
+
+.ObjDescription {
+  width: 400px;
+  height: 250px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+}
+.ObjDescriptionText {
+  margin: 3%;
+  margin-top: 10px;
+}
+
 .form{
   margin-bottom: 30px;
 }

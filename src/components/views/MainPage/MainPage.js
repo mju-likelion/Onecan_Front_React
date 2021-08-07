@@ -3,16 +3,26 @@ import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import ImageGallery from 'react-image-gallery'
 import './MainPage.css';
 
 function MainPage(props) {
 
-    const settings = { 
-      dots: true, 
-      infinite: true, 
-      speed: 500, 
-      slidesToShow: 1, 
-      slidesToScroll: 1 };
+    
+    const images = [
+      {
+        original: 'https://picsum.photos/id/1018/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1018/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1015/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1015/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1019/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      },
+    ];
 
 
     useEffect(() => {
@@ -30,6 +40,7 @@ function MainPage(props) {
         height: '120px'
       }}>
         {/* 이미지 슬라이더 필요 */}
+        <ImageGallery items={images} />
       </div>
         
         <div className="form">
