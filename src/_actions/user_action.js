@@ -95,10 +95,11 @@ export function removeCartItem(productId) {
         }
 }
 
-export function addToCart(id) {
+export function addToCart(id, count) {
 
   let body = {
-      productID : id
+      productID : id,
+      //productCount : count //수량 전송하는 거 잘 모르겠음.. 일단 count로 적어둠
   } //이제 백엔드에서 users.js 작성해 주면 됨
   const request = axios.post('${USER_SERVER}/addToCart', body)
         .then(response => response.data);

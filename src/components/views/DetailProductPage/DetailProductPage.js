@@ -32,10 +32,10 @@ function DetailProductPage(props) {
             <br />
                     
                     {/* ProductImage */}
-                    <div style={{width:'40%', marginTop:'20%', marginLeft:'100px'}}>
+                    <div style={{width:'38%', marginTop:'20%', marginLeft:'100px'}}>
                     <ProductImage detail={Product} />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-28%', marginLeft:'10%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-28%', marginLeft:'30%' }}>
                     {/* ProductInfo */}
                     <ProductInfo detail={Product} />
                     </div>

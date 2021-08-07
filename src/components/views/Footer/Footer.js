@@ -8,6 +8,10 @@ const onClickTerms = (e) => {
 const onClickInfo = (e) => {
   document.location.href = ('/information')
 }
+
+const onClickMain = (e) => {
+  document.location.href = '/';
+};
  
 function Footer() {
   return (
@@ -15,7 +19,7 @@ function Footer() {
       <section className="FooterContainer">
         <div className="FirstFooter">
           <footer>
-            <h1 className="name">One can do it!</h1>
+            <h1 className="name" onClick={onClickMain} style={{cursor: 'pointer'}}>One can do it!</h1>
             <nav>
               <ul className="lists">
                 <li onClick={onClickTerms} style={{cursor:'pointer'}}>이용약관</li>

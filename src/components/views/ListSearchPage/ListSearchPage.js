@@ -4,7 +4,7 @@ import { Col, Card, Row, Carousel, Button} from 'antd';
 import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
-import CheckBox from '../../views/ListSearchPage/Sections/CheckBox';
+import CheckBox from '../../views/ListObjPage/Sections/CheckBox';
 import {Continents} from './Sections/Datas'; //price 주석 처리 상태, 체크박스
 import Checkbox from './Sections/CheckBox';
 import Radiobox from './Sections/RadioBox';
@@ -70,8 +70,9 @@ function ListObjBestPage() {
   }
 
   const renderCards = Products.map((product, index) => {
+      
 
-      return <Col lg={6} md={8} xs={24} key={index}>
+      return <Col lg={6} md={8} xs={24} key={index}>4
           <Card
               cover={<a href={`/product/${product._id}`} ><ImageSlider images={product.images} /></a>}
           >
@@ -82,6 +83,8 @@ function ListObjBestPage() {
           </Card>
       </Col>
   })
+
+  
 
   const showFilteredResults = (filters) => {
 
@@ -142,11 +145,11 @@ function ListObjBestPage() {
   }
 
   return (
-      <div style={{ width: '75%', margin: '3rem auto' }}>
-
-          <div style={{ textAlign: 'center' }}>
-              <h2>- 에 대한 검색 결과입니다.</h2>
-              <hr />
+      <>
+      <Header />
+      <div style={{  }}>
+          <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
+              <h1>--에 대한 검색 결과입니다.</h1>
           </div>
 
           {/* Filter */}
@@ -174,9 +177,8 @@ function ListObjBestPage() {
 
           {/* Cards */}
 
-          <Row gutter={[16, 16]} >
               {renderCards}
-          </Row>
+
 
           <br />
 
@@ -184,7 +186,7 @@ function ListObjBestPage() {
           <h3 style={{
             textAlign: 'center',
             margin: '30px'
-          }}>현재 진열된 상품이 없습니다 :)</h3>
+          }}>현재 검색된 상품이 없습니다 :)</h3>
           <p
             onClick={onClickMain}
             style={{
@@ -201,6 +203,8 @@ function ListObjBestPage() {
               </div>
           }
       </div>
+      <Footer />
+      </>
   )
 }
 
