@@ -3,9 +3,7 @@ import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import './MainPage.css';
 
 function MainPage(props) {
 
@@ -26,31 +24,33 @@ function MainPage(props) {
     return (
       <>
       <Header />
-      <div style= {{
-        display: 'flex', justifyContent:'center', alignItems:'center',
-        width: '100%', height: '100vh'
+      <div style={{
+        marginTop: '300px',
+        width: '100%',
+        height: '120px'
       }}>
-        {/* <Slider {...settings}> 
-          <div>
-            <h3>1</h3>
-          </div> 
-          <div> 
-            <h3>2</h3> 
-          </div> 
-        </Slider> */}
-        <div>
-          <span>Best</span>
-        </div>
-        <div>
-          <span>Sale</span>
-        </div>
-        <div>
-          <span>Recipe</span>
-        </div>
-        <div>
-          <span>물물교환</span>
-        </div>
+        {/* 이미지 슬라이더 필요 */}
       </div>
+        
+        <div className="form">
+          <h1 className="category_title">Best</h1>
+          <p className="more">더보기</p>
+        </div>
+
+        <div className="form">
+          <h1 className="category_title" >Sale</h1>
+          <p className="more" >더보기</p>
+        </div>
+
+        <div className="form">
+          <h1 className="category_title" >Recipe</h1>
+          <p className="more" >더보기</p>
+        </div>
+
+        <div className="form"> 
+          <h1 className="category_title" >물물교환</h1>
+          <p className="more" >더보기</p>
+        </div>
       <Footer />
       </>
     )
