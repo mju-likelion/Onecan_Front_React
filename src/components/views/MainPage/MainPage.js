@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { Carousel } from 'antd';
+import { Carousel, Row, Col, Divider } from 'antd';
 import './MainPage.css';
 
 function MainPage(props) {
@@ -11,6 +11,12 @@ function MainPage(props) {
     const imgStyle = {
       width: '100%',
       height: '280px',
+    };
+
+    const style = { 
+      width: '160px',
+      height: '160px',
+      borderRadius: '9px'
     };
 
     useEffect(() => {
@@ -53,6 +59,36 @@ function MainPage(props) {
         <div className="form">
           <div>
             <h1 className="category_title">Best</h1>
+            <Row className="gutter">
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+            </Row>
             <p className="more">더보기</p>
           </div>
 
