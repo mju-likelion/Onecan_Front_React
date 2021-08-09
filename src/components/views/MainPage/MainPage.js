@@ -3,19 +3,21 @@ import React, {useEffect} from 'react';
 import {withRouter} from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import { Carousel, Row, Col, Divider } from 'antd';
+import './MainPage.css';
 
 function MainPage(props) {
 
-    const settings = { 
-      dots: true, 
-      infinite: true, 
-      speed: 500, 
-      slidesToShow: 1, 
-      slidesToScroll: 1 };
+    const imgStyle = {
+      width: '100%',
+      height: '280px',
+    };
 
+    const style = { 
+      width: '160px',
+      height: '160px',
+      borderRadius: '9px'
+    };
 
     useEffect(() => {
       axios.get('/api/hello')
@@ -26,35 +28,89 @@ function MainPage(props) {
     return (
       <>
       <Header />
-      <div style= {{
-        display: 'flex', justifyContent:'center', alignItems:'center',
-        width: '100%', height: '100vh'
+      <div style={{
+        marginTop: '200px',
+        width: '100%',
+        height: '120px'
       }}>
-        {/* <Slider {...settings}> 
+        <Carousel autoplay>
           <div>
-            <h3>1</h3>
-          </div> 
-          <div> 
-            <h3>2</h3> 
-          </div> 
-        </Slider> */}
-        <div>
-          <span>Best</span>
-        </div>
-        <div>
-          <span>Sale</span>
-        </div>
-        <div>
-          <span>Recipe</span>
-        </div>
-        <div>
-          <span>물물교환</span>
-        </div>
+            <img style={imgStyle}
+              src="https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg" 
+              alt="음식" />
+          </div>
+          <div>
+            <img style={imgStyle}
+              src="https://cdn.pixabay.com/photo/2017/08/30/17/12/waffle-hearts-2697904_1280.jpg" 
+              alt="음식" />
+          </div>
+          <div>
+            <img style={imgStyle}
+              src="https://cdn.pixabay.com/photo/2016/11/06/23/31/breakfast-1804457_1280.jpg" 
+              alt="음식" />
+          </div>
+          <div>
+            <img style={imgStyle}
+              src="https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_1280.jpg" 
+              alt="음식" />
+          </div>
+      </Carousel>
       </div>
+        <div className="form">
+          <div>
+            <h1 className="category_title">Best</h1>
+            <Row className="gutter">
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+              <Col className="gutter-row">
+                <img style={style}
+                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg" 
+                  alt="음식" />
+                <p className="list_name">이름</p>
+                <p className="list_price">가격</p>
+              </Col>
+            </Row>
+            <p className="more">더보기</p>
+          </div>
+
+          <div>
+            <h1 className="category_title" >Sale</h1>
+            <p className="more" >더보기</p>
+          </div>
+
+          <div>
+            <h1 className="category_title" >Recipe</h1>
+            <p className="more" >더보기</p>
+          </div>
+
+          <div> 
+            <h1 className="category_title" >물물교환</h1>
+            <p className="more" >더보기</p>
+          </div>
+        </div>
+        
       <Footer />
       </>
     )
   }
 
 export default withRouter(MainPage)
-

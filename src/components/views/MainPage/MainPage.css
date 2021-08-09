@@ -1,0 +1,39 @@
+.form{
+  margin-bottom: 30px;
+  margin-top: 250px;
+}
+
+.category_title{
+  margin-left: 300px;
+  margin-top: 30px;
+  font-family: Montserrat;
+  font-size: 30px;
+}
+
+.more{
+  font-family: Montserrat;
+  font-size: 15px;
+  float: right;
+  margin-right: 280px;
+  margin-top: 5px;
+}
+
+.gutter{
+  margin-left: 240px;
+}
+.gutter-row{
+  margin-left: 60px;
+  padding: 5px;
+}
+
+.list_name{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.list_price{
+  font-family: Montserrat;
+  font-size: 17px;
+}
