@@ -4,13 +4,14 @@ import { Col, Card, Row, Carousel, Button} from 'antd';
 import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
-import CheckBox from '../../views/ListObjPage/Sections/CheckBox';
+import CheckBox from './Sections/CheckBox';
 import {Continents} from './Sections/Datas'; //price 주석 처리 상태, 체크박스
 import Checkbox from './Sections/CheckBox';
 import Radiobox from './Sections/RadioBox';
 import SearchFeature from './Sections/SearchFeature';
-import Header from '../../../components/views/Header/Header';
-import Footer from '../../../components/views/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
 
 function ListObjBestPage() {
 
@@ -145,10 +146,11 @@ function ListObjBestPage() {
   }
 
   return (
-      <div>
-          <Header />
+      <>
+      <Header />
+      <div style={{ }}>
           <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
-              <h1>SALE</h1>
+          <h1>카테고리명</h1>
           </div>
 
           {/* Filter */}
@@ -176,9 +178,7 @@ function ListObjBestPage() {
 
           {/* Cards */}
 
-          
               {renderCards}
-
 
           <br />
 
@@ -202,9 +202,9 @@ function ListObjBestPage() {
                   <button onClick={loadMoreHanlder}>상품더보기</button>
               </div>
           }
-        <Footer />
       </div>
-     
+      <Footer />
+      </>
   )
 }
 
