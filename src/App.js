@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Link} from "react-router-dom";
 import MainPage from './components/views/MainPage/MainPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
@@ -20,7 +20,6 @@ function App() {
   return (
     <Router>
     <div>
-      {}
       <Switch>
         <Route exact path="/" component={Auth(MainPage, null)} />
         <Route exact path="/login" component={Auth(LoginPage, false)} />
