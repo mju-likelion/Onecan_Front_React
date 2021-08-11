@@ -15,6 +15,7 @@ import ListObjPage from './components/views/ListObjPage/ListObjPage';
 import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
 import ListSearchPage from './components/views/ListSearchPage/ListSearchPage';
 import MyPage from './components/views/MyPage/MyPage';
+import Join from './components/views/Join/Join';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
         <Route exact path="/mypage" component={Auth(MyPage, true)} />
+        <Route exact path="/join" component={Auth(Join, true)} />
 
       </Switch>
     </div>
