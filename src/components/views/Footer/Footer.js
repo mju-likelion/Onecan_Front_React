@@ -15,10 +15,10 @@ function Footer() {
             <nav>
               <ul className="lists">
                 <li style={{cursor:'pointer'}}>
-                <Link to='/information'>이용약관</Link>
+                <Link to='/information'>이용안내</Link>
                 </li>
                 <li style={{cursor: 'pointer'}}>
-                <Link to='/terms'>이용안내</Link>
+                <Link to='/terms'>이용약관</Link>
                 </li>
                 <li>
                 <Link to='/join'>입점문의</Link>

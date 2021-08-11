@@ -34,7 +34,6 @@ function DetailProductPage(props) {
         <div>
         <Header />
         <div style={{ width: '100%', padding: '5rem 6rem'}}>
-
             <br />
                     
                     {/* ProductImage */}
