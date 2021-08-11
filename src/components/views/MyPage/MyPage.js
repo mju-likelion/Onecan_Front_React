@@ -12,7 +12,7 @@ function MyPage() {
     <Header />
     <div className="form" style={{ width: '100%', padding: '5rem 6rem'}}>
           <div className="mypage_title" style={{ textAlign: 'center', marginTop:'2%', marginBotton:'3%' }}>
-            <h1 style={{marginLeft:"-60%"}}>마이페이지</h1>
+            <h1 style={{marginLeft:"-55%", fontSize: '37px'}}>마이페이지</h1>
             <br />
             <hr width="70%"/>
           </div>
@@ -20,10 +20,14 @@ function MyPage() {
             <br />
                     {/* MyImage */} 
                     <div style={{width:'38%', marginTop:'1%', marginLeft:'100px'}}>
+                    <p className="UserCharacter">나의 One can 캐릭터</p>
                     <ImageSelect detail={MyPage} />
-                    <hr style={{display:'flex'}} /> 
+                     
                     </div>
-                    <div className="InfoBox"style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-25%', marginLeft:'50%' }}>
+                    
+                    <div className="InfoBox" style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-32%', marginLeft:'50%' }}>
+                    <p className="UserInfo">고객 정보</p>
+                    <br />
                     {/* MyInfo */}
                     <MyInfo detail={MyPage} />
                     </div>

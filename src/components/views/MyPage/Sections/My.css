@@ -14,19 +14,32 @@
   font-family: Montserrat;
 }
 
+.UserInfo {
+  font-size: 30px;
+  font-family: Montserrat;
+  margin-Top: -11%;
+  margin-left: -30%;
+  margin-bottom: 30%;
+}
+
+.UserCharacter {
+  font-size: 30px;
+  font-family: Montserrat;
+  margin-Top: 12%;
+  margin-left: 20%;
+}
 .InfoBox {
-  
   width: 500px;
   height: 250px;
   background-color: #f2f7f2;
   border-radius: 10px;
   margin-left: 50%;
+  margin-top: -10%;
 }
 
 .MyText {
 
-  margin-left: -60%;
-
+  margin-left: -50%;
   margin-top: 10%;
 
 }

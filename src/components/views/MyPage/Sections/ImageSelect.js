@@ -22,7 +22,7 @@ function ImageSelect() {
   return ( //랜딩이미지 수정 예정
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      <img className="phoneImage" style={{cursor: 'pointer'}} alt="LandingImg" src="./MyLandingPhoto.jpg" /> 
+      <img className="phoneImage" style={{cursor: 'pointer'}} alt="LandingImg" src="./LandingImag.jpg" /> 
       
     </div>
   )
