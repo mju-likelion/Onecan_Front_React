@@ -1,0 +1,34 @@
+
+.MyName {
+  font-size: 23px;
+  font-family: Montserrat;
+}
+
+.MyPhone {
+  font-size: 23px;
+  font-family: Montserrat;
+}
+
+.MyAddress {
+  font-size: 23px;
+  font-family: Montserrat;
+}
+
+.InfoBox {
+  
+  width: 500px;
+  height: 250px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+  margin-left: 50%;
+}
+
+.MyText {
+
+  margin-left: -60%;
+
+  margin-top: 10%;
+
+}
+
+
