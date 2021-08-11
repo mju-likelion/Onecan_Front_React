@@ -11,7 +11,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 
 
 function DetailProductPage(props) {
-    console.log(props)
+     //url props number 바뀌는 거
+  console.log(props)
     
     const productId = props.match.params.productId 
 
@@ -32,18 +33,15 @@ function DetailProductPage(props) {
     return (
         <div>
         <Header />
-        <div style={{ width: '100%', padding: '3rem 6rem' }}>
+        <div style={{ width: '100%', padding: '5rem 6rem'}}>
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <h1>{Product.title}</h1>
-            </div>
             <br />
                     
                     {/* ProductImage */}
                     <div style={{width:'38%', marginTop:'20%', marginLeft:'100px'}}>
                     <ProductImage detail={Product} />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-28%', marginLeft:'30%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems:'flex-start', marginTop:'-28%', marginLeft:'35%' }}>
                     {/* ProductInfo */}
                     <ProductInfo detail={Product} />
                     </div>

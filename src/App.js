@@ -29,8 +29,8 @@ function App() {
         <Route exact path="/uploadbarter" component={Auth(UploadBarterPage, true)} />
         <Route exact path="/cart" component={Auth(CartPage, true)} /> 
         <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} />
-        <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
         <Route exact path="/listobj/:listId" component={Auth(ListObjPage, null)} /> 
+        <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
         <Route exact path="/listbarter" component={Auth(ListBarterPage, null)} /> 
         <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} /> 
         <Route exact path="/terms" component={Auth(TermsPage, true)} />

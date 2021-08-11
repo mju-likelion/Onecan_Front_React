@@ -31,10 +31,7 @@ function ProductInfo(props) {
       <br />
       <div className="ObjDescription">
                    <p className="ObjDescriptionText">
-                     <br />
-                    상품 설명 상품 설명 상품 설명 상품 설명 상품 설명
-                   상품 설명 상품 설명 상품 설명 상품 설명 상품 설명
-                   상품 설명 상품 설명 상품 설명 상품 설명 상품 설명
+                     <br /> 
                    {ObjDescription}
                    </p>
                 </div>
