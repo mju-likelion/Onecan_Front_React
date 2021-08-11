@@ -1,40 +1,12 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import { Menu, Dropdown } from 'antd';
 import "./Header.css";
 
 function Header(props) {
 
   const [ShowLogin, setShowLogin] = useState(false)
-
-  const onClickLogin = (e) => {
-    // 로그인 페이지로 이동
-    document.location.href = "/login";
-  };
-
-  const onClickJoin = (e) => {
-    document.location.href = "/register";
-  };
-
-  const onClickFQ = (e) => {
-    document.location.href = "/f&q";
-  };
-
-  const onClickMain = (e) => {
-    document.location.href = '/';
-  };
-
-  const onClickCart = (e) => {
-    document.location.href = '/cart';
-  };
-
-  const onClickBest = (e) => {
-    document.location.href = '/listobjbest';
-  }
-
-  const onClickSale = (e) => {
-    document.location.href = '/listobjsale';
-  }
 
   // 로그아웃
   const onClickLogout = () => {
@@ -72,15 +44,23 @@ function Header(props) {
             {ShowLogin ?
               <li onClick={onClickLogout} style={{cursor: 'pointer'}}>로그아웃</li>
               :
-              <li onClick={onClickLogin} style={{cursor: 'pointer'}}>로그인</li>
+              <li style={{cursor: 'pointer'}}>
+                <Link to='/login' style={{color: 'black'}}>로그인</Link>
+              </li>
             }
-            <li onClick={onClickJoin}  style={{cursor: 'pointer'}}>회원가입</li>
-            <li onClick={onClickFQ}  style={{cursor: 'pointer'}}>F&Q</li>
+            <li style={{cursor: 'pointer'}}>
+              <Link to='/register' style={{color: 'black'}}>회원가입</Link>
+            </li>
+            <li style={{cursor: 'pointer'}}>
+              <Link to='/f&q' style={{color: 'black'}}>F&Q</Link>
+            </li>
           </ul>
         </div>
 
         <div className="title_search">
-          <div className="title" onClick={onClickMain} style={{cursor: 'pointer'}}>One can do it!</div>
+          <div className="title" style={{cursor: 'pointer'}}>
+            <Link to='/' style={{color: 'black'}}>One can do it!</Link>
+          </div>
           <div className="search">
             <input placeholder="검색어를 입력하세요"></input>
           </div>
@@ -89,9 +69,15 @@ function Header(props) {
           <div className="category_list">
             <ul>
               <li>전체 카테고리</li>
-              <li onClick={onClickBest} style={{cursor: 'pointer'}}>BEST</li>
-              <li onClick={onClickSale} style={{cursor: 'pointer'}}>SALE</li>
-              <li onClick={onClickCart} style={{cursor: 'pointer'}}>장바구니</li>
+              <li style={{cursor: 'pointer'}}>
+                <Link to='listobjbest'>BEST</Link>
+              </li>
+              <li style={{cursor: 'pointer'}}>
+                <Link to='listobjsale'>SALE</Link>
+              </li>
+              <li style={{cursor: 'pointer'}}>
+                <Link to='/cart'>장바구니</Link>
+              </li>
               <li>
               <Dropdown overlay={menu} style={{cursor: 'pointer'}}>
                 <li style={{cursor: 'pointer'}}>
