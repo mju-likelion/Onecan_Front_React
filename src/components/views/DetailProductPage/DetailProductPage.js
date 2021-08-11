@@ -6,15 +6,18 @@ import { Row, Col } from 'antd';
 import '../../views/DetailProductPage/Sections/Detail.css';
 import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';
+import {BrowserRouter as Router} from "react-router-dom";
+
 
 
 function DetailProductPage(props) {
+    console.log(props)
     
-    //const productId = props.match.params.productId
+    const productId = props.match.params.productId 
 
     const [Product, setProduct] = useState({})
 
-    {/*
+    
     useEffect(() => {
         axios.get(`/api/product/products_by_id?id=${productId}&type=single`)
             .then(response => {
@@ -23,9 +26,9 @@ function DetailProductPage(props) {
             .catch(err => alert(err))
     }, []) 
 
-     */}
+     
 
-
+        
     return (
         <div>
         <Header />
@@ -49,6 +52,7 @@ function DetailProductPage(props) {
         </div>
         
     )
-}
+ }
+
 
 export default DetailProductPage

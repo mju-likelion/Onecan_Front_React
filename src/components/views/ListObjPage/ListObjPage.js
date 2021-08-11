@@ -13,7 +13,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 
-function ListObjBestPage() {
+function ListObjBestPage(props) {
 
   const [Products, setProducts] = useState([])
   const [Skip, setSkip] = useState(0)
@@ -28,6 +28,23 @@ function ListObjBestPage() {
   const onClickMain = (e) => {
     document.location.href = "/";
   };
+
+
+  //url props number 바뀌는 거
+  console.log(props)
+    
+  const listId = props.match.params.listId 
+
+  const [List, setList] = useState({})
+
+  
+  useEffect(() => {
+      axios.get(`/api/list/lists_by_id?id=${listId}&type=single`)
+          .then(response => {
+              setList(response.data[0])
+          })
+          .catch(err => alert(err))
+  }, []) 
 
 
   useEffect(() => { //상품 길이
@@ -150,7 +167,7 @@ function ListObjBestPage() {
       <Header />
       <div style={{ }}>
           <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
-          <h1>카테고리명</h1>
+          <h1>{List.title}</h1>
           </div>
 
           {/* Filter */}
