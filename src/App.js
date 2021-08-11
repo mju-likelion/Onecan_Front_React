@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Link} from "react-router-dom";
 import MainPage from './components/views/MainPage/MainPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
@@ -14,13 +14,12 @@ import ListRecipePage from './components/views/ListRecipePage/ListRecipePage';
 import ListObjPage from './components/views/ListObjPage/ListObjPage';
 import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
 import ListSearchPage from './components/views/ListSearchPage/ListSearchPage';
-
+import MyPage from './components/views/MyPage/MyPage';
 
 function App() {
   return (
     <Router>
     <div>
-      {}
       <Switch>
         <Route exact path="/" component={Auth(MainPage, null)} />
         <Route exact path="/login" component={Auth(LoginPage, false)} />
@@ -35,6 +34,7 @@ function App() {
         <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} /> 
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
+        <Route exact path="/mypage" component={Auth(MyPage, true)} />
 
       </Switch>
     </div>
