@@ -1,7 +1,7 @@
 .form{
   margin-bottom: 30px;
   margin-top: 250px;
-  margin-left: 50px;
+  margin-left: 6%;
 }
 
 .categoryTitle{
@@ -11,11 +11,19 @@
   font-size: 30px;
 }
 
+.categoryTitleFirst {
+  margin-left: 300px;
+  margin-top: 400px;
+  font-family: Montserrat;
+  font-size: 30px;
+}
+
 .more{
   font-family: Montserrat;
   font-size: 15px;
   float: right;
-  margin-right: 500px;
+  margin-right: 35%;
+  margin-bottom: -10px;
 }
 
 .gutter{

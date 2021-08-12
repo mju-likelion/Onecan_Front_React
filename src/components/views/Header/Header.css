@@ -71,7 +71,7 @@ body {
 }
 
 .category_list {
-  width: 100%;
+  width: 80%; /*헤더 디자인 수정*/
   border-bottom: 2px solid lightgray;
 }
 
