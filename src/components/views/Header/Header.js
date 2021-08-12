@@ -90,7 +90,7 @@ function Header(props) {
 
         <div className="title_search">
           <div className="title" style={{cursor: 'pointer'}}>
-            <Link to='/' style={{color: 'black'}}>One can do it!</Link>
+            <Link to='/' style={{color: 'black', fontSize: '45px'}}>One can do it!</Link>
           </div>
           <div className="search">
             <input placeholder="검색어를 입력하세요!"></input>
