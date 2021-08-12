@@ -17,6 +17,9 @@ import ListSearchPage from './components/views/ListSearchPage/ListSearchPage';
 import MyPage from './components/views/MyPage/MyPage';
 import Join from './components/views/Join/Join';
 
+import DetailRecipePage from './components/views/DetailRecipePage/DetailRecipePage';
+import DetailBarterPage from './components/views/DetailBarterPage/DetailBarterPage';
+
 function App() {
   return (
     <Router>
@@ -32,7 +35,9 @@ function App() {
         <Route exact path="/listobj/:listId" component={Auth(ListObjPage, null)} /> 
         <Route exact path="/listrecipe" component={Auth(ListRecipePage, null)} /> 
         <Route exact path="/listbarter" component={Auth(ListBarterPage, null)} /> 
-        <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} /> 
+        <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} />
+        <Route exact path="/detailrecipe" component={Auth(DetailRecipePage, null)} />
+        <Route exact path="/detailbarter" component={Auth(DetailBarterPage, null)} />
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
         <Route exact path="/mypage" component={Auth(MyPage, true)} />
