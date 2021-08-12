@@ -27,10 +27,10 @@ function Header(props) {
   const menu = (
     <Menu>
       <Menu.Item>
-          레시피
+      <Link to='/listrecipe' style={{color: 'black'}}>레시피</Link>
       </Menu.Item>
       <Menu.Item>
-          물물교환
+      <Link to='/listbarter' style={{color: 'black'}}>물물교환</Link>
       </Menu.Item>
     </Menu>
   );
@@ -71,10 +71,10 @@ function Header(props) {
             <ul>
               <li>전체 카테고리</li>
               <li style={{cursor: 'pointer'}}>
-                <Link to='listobjbest'>BEST</Link>
+                <Link to='/listobj/:listId'>BEST</Link>
               </li>
               <li style={{cursor: 'pointer'}}>
-                <Link to='listobjsale'>SALE</Link>
+                <Link to='/listobj/:listId'>SALE</Link>
               </li>
               <li style={{cursor: 'pointer'}}>
                 <Link to='/cart'>장바구니</Link>

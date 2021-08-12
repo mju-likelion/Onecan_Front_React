@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import { Descriptions, Button } from 'antd';
 import {useDispatch} from 'react-redux';
 import { addToCart } from '../../../../_actions/user_action';
-import axios from "axios";
+//import axios from "axios";
 import Count from '../../../utils/Count';
 
 //기존 전송 코드

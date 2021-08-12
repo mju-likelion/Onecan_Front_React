@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import { Col, Card, Row, Carousel, Button} from 'antd';
-import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
+import { Col, Card} from 'antd';
+//import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
-import CheckBox from '../../views/ListObjPage/Sections/CheckBox';
-import {Continents} from './Sections/Datas'; //price 주석 처리 상태, 체크박스
-import Checkbox from './Sections/CheckBox';
-import Radiobox from './Sections/RadioBox';
-import SearchFeature from './Sections/SearchFeature';
+//import CheckBox from '../../views/ListObjPage/Sections/CheckBox';
+//import {Continents} from './Sections/Datas'; //price 주석 처리 상태, 체크박스
+//import Checkbox from './Sections/CheckBox';
+//import Radiobox from './Sections/RadioBox';
+//import SearchFeature from './Sections/SearchFeature';
 import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';
 

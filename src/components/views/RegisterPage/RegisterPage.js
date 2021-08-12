@@ -4,7 +4,7 @@ import { registerUser } from "../../../_actions/user_action";
 import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
-import { Form, Input, Button, } from "antd";
+import { Input, Button, } from "antd";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();

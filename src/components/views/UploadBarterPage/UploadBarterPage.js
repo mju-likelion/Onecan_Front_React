@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
-import {Button, Form, Input} from 'antd';
+import {Form, Input} from 'antd';
 import FileUpload from '../../utils/FileUpload';
 import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';
 import  '../../../components/views/UploadRecipePage/UploadRecipe.css';
 import Editor from '../../../components/utils/Editor';
 
-const {TextArea} = Input;
+const {} = Input;
 function UploadBarterPage() {
 
       const [Title, setTitle] = useState("")

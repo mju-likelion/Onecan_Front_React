@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, Form, Input} from 'antd';
+import {Form, Input} from 'antd';
 import FileUpload from '../../utils/FileUpload';
 import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';

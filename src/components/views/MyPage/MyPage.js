@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios";
+import React from 'react';
+//import axios from "axios";
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ImageSelect from './Sections/ImageSelect';
