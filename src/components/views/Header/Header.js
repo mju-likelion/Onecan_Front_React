@@ -27,13 +27,43 @@ function Header(props) {
   const menu = (
     <Menu>
       <Menu.Item>
-      <Link to='/listrecipe' style={{color: 'black'}}>레시피</Link>
+      <Link to='/listrecipe' style={{}}>레시피</Link>
       </Menu.Item>
       <Menu.Item>
       <Link to='/listbarter' style={{color: 'black'}}>물물교환</Link>
       </Menu.Item>
     </Menu>
   );
+
+  const categorymenu = (
+    <Menu>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>Best 상품</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>New 상품</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>채소ㆍ과일</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>수산물</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>정육ㆍ계란</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>생수ㆍ음료</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>유제품</Link>
+        </Menu.Item>
+        <Menu.Item>
+        <Link to='/listobj/:listId'>생필품ㆍ주방용품</Link>
+        </Menu.Item>
+        
+    </Menu>
+  )
   
   return (
     <>
@@ -63,19 +93,23 @@ function Header(props) {
             <Link to='/' style={{color: 'black'}}>One can do it!</Link>
           </div>
           <div className="search">
-            <input placeholder="검색어를 입력하세요"></input>
+            <input placeholder="검색어를 입력하세요!"></input>
           </div>
         </div>
         <div className="category">
           <br />
           <div className="category_list">
             <ul>
-              <li>전체 카테고리</li>
+              <Dropdown overlay={categorymenu} style={{cursor: 'pointer'}}>
+                <li style={{cursor: 'pointer'}}>
+                  전체 카테고리
+                </li>
+              </Dropdown>
               <li style={{cursor: 'pointer'}}>
                 <Link to='/listobj/:listId'>BEST</Link>
               </li>
               <li style={{cursor: 'pointer'}}>
-                <Link to='/listobj/:listId'>SALE</Link>
+                <Link to='/listobj/:listId'>신상품</Link>
               </li>
               <li style={{cursor: 'pointer'}}>
                 <Link to='/cart'>장바구니</Link>

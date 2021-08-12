@@ -101,7 +101,7 @@ function MainPage(props) {
           <div>
               <h1 className="categoryTitle">
                 <Link to='/listobj/:listId' style={{color: '#4d804a'}}>
-                  Sale<RightOutlined /></Link>
+                  신상품<RightOutlined /></Link>
               </h1> 
             <div>
             <Row className="gutter">
@@ -142,7 +142,7 @@ function MainPage(props) {
           <div className="thirdBlock">
             <h1 className="categoryTitle">
                 <Link to='/listrecipe' style={{color: '#4d804a'}}>
-                  Recipe<RightOutlined /></Link>
+                  레시피<RightOutlined /></Link>
             </h1>
             <div>
             <Row className="gutter">
@@ -175,7 +175,7 @@ function MainPage(props) {
           <div className="fourthBlock"> 
             <h1 className="categoryTitle">
                 <Link to='/listbarter' style={{color: '#4d804a'}}>
-                  Barter<RightOutlined />
+                  물물교환<RightOutlined />
                 </Link>
             </h1>
             <div>
