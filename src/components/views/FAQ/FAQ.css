@@ -1,0 +1,65 @@
+.contents {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contents .title_list {
+  width: 878px;
+  margin: 0 auto;
+  font-family: 'Montserrat';
+}
+
+.contents .title_list .title_one {
+  text-align: center;
+}
+
+.contents .title_list .title_one h1 {
+  margin-top: 300px;
+  margin-left: -50px;
+  margin-bottom: 150px;
+  font-size: 35px;
+  line-height: 2;
+}
+
+.contents .title_list .title_two {
+  text-align: center;
+}
+
+.contents .title_list .title_two h1 {
+  margin-top: -50px;
+  margin-left: 90px;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+
+/* 이용약관 리스트 */
+.service_wrap{
+  align-items: center;
+  margin-right: 100px;
+}
+
+.market {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  color: #31572E;
+  font-family: Montserrat;
+}
+
+.market .market_service {
+  width: 800px;
+  height: 380px;
+  background-color: #f2f7f2;
+  border-radius: 10px;
+}
+
+.market_content{
+  font-family: Montserrat;
+  font-size: 16px;
+  margin-top: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+  color: black;
+}
+

@@ -27,12 +27,8 @@ function InfoPage() {
                     <p className="market_content">현재 입점 준비 중입니다.</p>
                     <p className="market_content">자세한 사항은 onecandoit@likelion.org로 문의 메일 부탁드립니다.</p>
                     <p className="market_content">감사합니다!</p>
-                    
-                
-                    
                 </div>
             </div>
-           
         </div>
       </div>
       <Footer />

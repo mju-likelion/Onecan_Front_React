@@ -7,6 +7,7 @@ import "./Header.css";
 function Header(props) {
 
   const [ShowLogin, setShowLogin] = useState(false)
+  const [ShowRegister, setShowRegister] = useState(false)
 
   // 로그아웃
   const onClickLogout = () => {
@@ -22,7 +23,7 @@ function Header(props) {
               setShowLogin(false)
             }
         })
-  }
+      }
 
   const menu = (
     <Menu>
@@ -73,18 +74,21 @@ function Header(props) {
         <div className="auth">
           <ul>
             {ShowLogin ?
-              <li onClick={onClickLogout} style={{cursor: 'pointer'}}>로그아웃</li>
+              <li onClick={onClickLogout} style={{cursor: 'pointer', color: 'black'}}>로그아웃</li>
               :
               <li style={{cursor: 'pointer'}}>
                 <Link to='/login' style={{color: 'black'}}>로그인</Link>
               </li>
             }
-            <li style={{cursor: 'pointer'}}>
-              <Link to='/register' style={{color: 'black'}}>회원가입</Link>
-            </li>
-            <li style={{cursor: 'pointer'}}>
-              <Link to='/faq' style={{color: 'black'}}>FAQ</Link>
-            </li>
+            {ShowRegister ?
+              <li style={{cursor: 'pointer'}}><Link to='/mypage' style={{color: 'black'}}>마이페이지</Link></li>
+              :
+               <li> <Link to='/register' style={{color: 'black'}}>회원가입</Link>
+              </li>
+            }
+              <li style={{cursor: 'pointer'}}>
+                <Link to='/faq' style={{color: 'black'}}>FAQ</Link>
+              </li>
           </ul>
         </div>
 

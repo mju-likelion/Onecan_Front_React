@@ -178,32 +178,18 @@ function MainPage(props) {
           <div className="fourthBlock">
             <h1 className="categoryTitle">
                 <Link to='/listbarter' style={{color: '#4d804a'}}>
-                  물물교환<RightOutlined />
-                </Link>
+                  물물교환<RightOutlined /></Link>
             </h1>
             <div>
             <Row className="gutter">
-              <Col className="gutter-row">
-                <img style={style}
-                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg"
-                  alt="음식" />
-              </Col>
-              <Col className="gutter-row">
-                <img style={style}
-                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg"
-                  alt="음식" />
-              </Col>
-              <Col className="gutter-row">
-                <img style={style}
-                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg"
-                  alt="음식" />
-              </Col>
-              <Col className="gutter-row">
-                <img style={style}
-                  src="https://cdn.pixabay.com/photo/2015/03/26/09/45/grapes-690230_1280.jpg"
-                  alt="음식" />
-              </Col>
-            </Row>
+                {barter.map(item => (
+                  <Col className="gutter-row">
+                    <img style={style}
+                      src={item.image}
+                      alt="음식" />
+                  </Col>
+                ))}
+              </Row>
             <br />
             <br />
           </div>
