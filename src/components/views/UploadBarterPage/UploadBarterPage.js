@@ -10,15 +10,11 @@ const {} = Input;
 function UploadBarterPage() {
 
       const [Title, setTitle] = useState("")
-      const [Hashtag, setHashtag] = useState("")
       const [Description, setDescription] = useState("")
       const [Images, setImages] = useState([])
 
       const titleChangeHandler = (event) => {
         setTitle(event.currentTarget.value)
-      }
-      const hashtagChangeHandler = (event) => {
-        setHashtag(event.currentTarget.value)
       }
       const descriptionChangeHandler = (event) => {
         setDescription(event.currentTarget.value)
@@ -47,7 +43,7 @@ function UploadBarterPage() {
               <div 
               style={{textAlign: 'center', marginBottom: '2rem'}}>
                 <h1 
-                style ={{display:'flex', justifyContent:'start'}}>레시피 작성</h1>
+                style ={{display:'flex', justifyContent:'start'}}>물물교환 신청서 작성</h1>
               </div>
               <FileUpload 
                       style={{ borderRadius: 9}} 
@@ -63,14 +59,6 @@ function UploadBarterPage() {
                       style={{ borderRadius: 9}} 
                       onChange={titleChangeHandler} 
                       value={Title}/>
-                  <br />
-                  <br />
-                  <label>해시태그</label>
-                      <Input 
-                      placeholder="해시태그를 작성해주세요"
-                      style={{ borderRadius: 9}} 
-                      onChange={hashtagChangeHandler} 
-                      value= {Hashtag}/>
                   <br />
                   <br />
                   <label>글 작성</label>

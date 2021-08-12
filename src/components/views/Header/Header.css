@@ -6,8 +6,8 @@ body {
 
 /* 헤더 */
 .HeaderContainer {
-  background-color: #31572E;
-  height: 40px;
+  background-color:  #31572E;
+  height: 50px;
   width: 100%;
 }
 
@@ -25,7 +25,7 @@ body {
 
 .auth li {
   margin-right: 3%;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* nav */
@@ -53,7 +53,7 @@ body {
 .title_search .search input {
   width: 460px;
   height: 100%;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0 1em;
   border-bottom: 2px solid lightgray;
   border-top: 0 solid white;
@@ -61,6 +61,7 @@ body {
   border-left: 0 solid white;
   outline: none;
   margin-left: 110px;
+  margin-top: 20px;
 }
 
 /* category */
@@ -82,7 +83,7 @@ body {
 
 .category_list ul li {
   margin-right: 40px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .category_list ul li a {

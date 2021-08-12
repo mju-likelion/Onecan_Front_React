@@ -53,7 +53,7 @@ function Header(props) {
               <Link to='/register' style={{color: 'black'}}>회원가입</Link>
             </li>
             <li style={{cursor: 'pointer'}}>
-              <Link to='/f&q' style={{color: 'black'}}>F&Q</Link>
+              <Link to='/faq' style={{color: 'black'}}>FAQ</Link>
             </li>
           </ul>
         </div>
@@ -67,6 +67,7 @@ function Header(props) {
           </div>
         </div>
         <div className="category">
+          <br />
           <div className="category_list">
             <ul>
               <li>전체 카테고리</li>

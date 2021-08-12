@@ -6,19 +6,15 @@ import Footer from '../../../components/views/Footer/Footer';
 import  '../../../components/views/UploadRecipePage/UploadRecipe.css';
 import Editor from '../../../components/utils/Editor';
 
-const {TextArea} = Input;
+const {} = Input;
 function UploadRecipePage() {
 
       const [Title, setTitle] = useState("")
-      const [Hashtag, setHashtag] = useState("")
       const [Description, setDescription] = useState("")
       const [Images, setImages] = useState([])
 
       const titleChangeHandler = (event) => {
         setTitle(event.currentTarget.value)
-      }
-      const hashtagChangeHandler = (event) => {
-        setHashtag(event.currentTarget.value)
       }
       const descriptionChangeHandler = (event) => {
         setDescription(event.currentTarget.value)
@@ -62,14 +58,6 @@ function UploadRecipePage() {
                       style={{ borderRadius: 9}} 
                       onChange={titleChangeHandler} 
                       value={Title}/>
-                  <br />
-                  <br />
-                  <label>해시태그</label>
-                      <Input 
-                      placeholder="해시태그를 작성해주세요"
-                      style={{ borderRadius: 9}} 
-                      onChange={hashtagChangeHandler} 
-                      value= {Hashtag}/>
                   <br />
                   <br />
                   <label>글 작성</label>

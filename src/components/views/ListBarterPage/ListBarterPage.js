@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import { Col, Card} from 'antd';
-//import {QuestionOutlined} from '@ant-design/icons'; //아이콘 import 오류 해결
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
 import Header from '../Header/Header';
