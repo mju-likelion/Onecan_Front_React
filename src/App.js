@@ -16,6 +16,7 @@ import ListBarterPage from './components/views/ListBarterPage/ListBarterPage';
 import ListSearchPage from './components/views/ListSearchPage/ListSearchPage';
 import MyPage from './components/views/MyPage/MyPage';
 import Join from './components/views/Join/Join';
+import FAQ from './components/views/FAQ/FAQ';
 
 import DetailRecipePage from './components/views/DetailRecipePage/DetailRecipePage';
 import DetailBarterPage from './components/views/DetailBarterPage/DetailBarterPage';
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/information" component={Auth(InfoPage, true)} />
         <Route exact path="/mypage" component={Auth(MyPage, true)} />
         <Route exact path="/join" component={Auth(Join, true)} />
+        <Route exact path="/faq" component={Auth(FAQ, true)} />
 
       </Switch>
     </div>
