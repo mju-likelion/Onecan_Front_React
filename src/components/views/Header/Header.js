@@ -39,6 +39,7 @@ function Header(props) {
     <>
       {/* 헤더 */}
       <header className="HeaderContainer">
+        <div style={{width:'80%', marginLeft:'180px'}}>
         <div className="auth">
           <ul>
             {ShowLogin ?
@@ -87,6 +88,7 @@ function Header(props) {
               </li>
             </ul>
           </div>
+        </div>
         </div>
       </header>
     </>

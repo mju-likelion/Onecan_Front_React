@@ -1,9 +1,10 @@
 .form{
   margin-bottom: 30px;
   margin-top: 250px;
+  margin-left: 50px;
 }
 
-.category_title{
+.categoryTitle{
   margin-left: 300px;
   margin-top: 30px;
   font-family: Montserrat;
@@ -14,8 +15,7 @@
   font-family: Montserrat;
   font-size: 15px;
   float: right;
-  margin-right: 280px;
-  margin-top: 5px;
+  margin-right: 500px;
 }
 
 .gutter{
@@ -36,4 +36,10 @@
 .list_price{
   font-family: Montserrat;
   font-size: 17px;
+}
+
+
+
+.fourthBlock {
+  margin-top: 100px;
 }
