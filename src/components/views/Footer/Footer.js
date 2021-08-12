@@ -10,18 +10,18 @@ function Footer() {
         <div className="FirstFooter">
           <footer>
                 <h1 className="name" style={{cursor: 'pointer'}}>
-                <Link to='/'>One can do it!</Link>
+                <Link to='/' style={{color: 'black'}}>One can do it!</Link>
                 </h1>
             <nav>
               <ul className="lists">
                 <li style={{cursor:'pointer'}}>
-                <Link to='/information'>이용안내</Link>
+                <Link to='/information' style={{color: 'black'}}>이용안내</Link>
                 </li>
                 <li style={{cursor: 'pointer'}}>
-                <Link to='/terms'>이용약관</Link>
+                <Link to='/terms' style={{color: 'black'}}>이용약관</Link>
                 </li>
                 <li>
-                <Link to='/join'>입점문의</Link>
+                <Link to='/join' style={{color: 'black'}}>입점문의</Link>
                 </li>
               </ul>
               <hr className="line" />
