@@ -6,6 +6,7 @@ import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
 import { Input, Button, } from "antd";
 import Popup from '../TermsPage/RegisterTermsPage';
+import RegisterTermsPage from "../TermsPage/RegisterTermsPage";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -82,7 +83,10 @@ function RegisterPage(props) {
   return (
     <>
       <Header />
-
+      <div style={{
+      display: 'flex', justifyContent: 'center', alignItems: 'center',
+      width: '100%', height: '100vh'
+    }}>
       <div
         style={{
           display: "flex",
@@ -205,7 +209,7 @@ function RegisterPage(props) {
                       color:'#3d463d'
                     }}
                     onClick={
-                      () => window.open('https://onecandoit.netlify.app/#/RegisterTermsPage', '_blank')}>
+                      () => window.open('/RegisterTermsPage', '_blank')}>
                       개인정보 수집 및 활용 동의
                 </Button>
               <input 
@@ -235,7 +239,7 @@ function RegisterPage(props) {
           </form>
         </div>
       </div>
-
+    </div>
       <Footer />
     </>
   );
