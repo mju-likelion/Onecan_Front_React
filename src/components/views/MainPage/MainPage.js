@@ -38,7 +38,7 @@ function MainPage() {
         setNew_Product(response.data.slice(0, 4))
       })
       */}
-    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/recipe/`) //recipe api
+    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/recipe/`) //recipe api
       .then(response => {
         console.log(response);
         setRecipe(response.data.slice(0, 4))
