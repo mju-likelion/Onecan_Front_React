@@ -58,52 +58,56 @@ function CartPage(props){
 
 
   return(
-    <div>
-      <Header />
-      <h1 style={{
-        marginTop: '250px',
-        marginLeft: '220px'
-      }}>장바구니</h1>
-      <div>
-        <UserCardBlock />
-        {/* <UserCardBlock products={props.user.cartDetail} removeItem={removeFromCart} /> */}
-      </div>
-      {ShowTotal ?
-        <div style={{
-          marginTop: '100px',
-          marginLeft: '240px'
-        }}>
-          <h2>총 금액: {Total} 원</h2>
-          <Button style={{
-          width: '150px',
-          height: '40px',
-          borderRadius: 10,
-          border: 0,
-          fontFamily: 'Montserrat',
-          color: 'white',
-          background: '#6AB04C',
-          cursor: 'pointer',
-          margin: '10px'
-          }}>
-          구매하기
-        </Button>
-        </div>
-        :
-        <div>
-          <h3 style={{
-            textAlign: 'center',
-            margin: '30px'
-          }}>장바구니에 담긴 상품이 없습니다 :)</h3>
-          <p
-            onClick={onClickMain}
-            style={{
-              textAlign: 'center',
+    <div className="cart">
+          <Header />
+          <div className="form" style={{marginLeft:'10%'}}>
+          <h1 style={{
+            marginTop: '250px',
+            marginLeft: '220px'
+          }}>장바구니</h1>
+          <div>
+            <UserCardBlock />
+            {/* <UserCardBlock products={props.user.cartDetail} removeItem={removeFromCart} /> */}
+          </div>
+          {ShowTotal ?
+            <div style={{
+              marginTop: '100px',
+              marginLeft: '240px'
+            }}>
+              <h2>총 금액: {Total} 원</h2>
+              <Button style={{
+              width: '150px',
+              height: '40px',
+              borderRadius: 10,
+              border: 0,
               fontFamily: 'Montserrat',
-              fontSize: '15px',
-              cursor: 'pointer'
-            }}>One can do it! 구경하러 가기</p>
+              color: 'white',
+              background: '#6AB04C',
+              cursor: 'pointer',
+              margin: '10px'
+              }}>
+              구매하기
+            </Button>
+            </div>
+            :
+            <div style={{}}>
+              <h3 style={{
+                textAlign: 'center',
+                margin: '40px',
+                marginLeft:'-12%'
+              }}>현재 장바구니에 담긴 상품이 없습니다 :)</h3>
+              <p
+                onClick={onClickMain}
+                style={{
+                  textAlign: 'center',
+                  fontFamily: 'Montserrat',
+                  fontSize: '15px',
+                  cursor: 'pointer',
+                  marginLeft:'-15%'
+                }}>One can do it! 구경하러 가기</p>
+            </div>
+          }
         </div>
-      }
       <Footer />
     </div>
   )

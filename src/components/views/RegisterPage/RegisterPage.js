@@ -5,8 +5,6 @@ import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
 import { Input, Button, } from "antd";
-import Popup from '../TermsPage/RegisterTermsPage';
-import RegisterTermsPage from "../TermsPage/RegisterTermsPage";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -176,7 +174,7 @@ function RegisterPage(props) {
             <label>주소</label>
             <Input 
             id ="Address"
-            placeholder="주소를 입력하세요"
+            placeholder="주소를 입력하세요(상세 주소 포함)"
             type="text"
             value={Address} 
             onChange={onAddressHandler}
