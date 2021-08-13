@@ -89,13 +89,13 @@ function MainPage() {
               </h1>
               <div>
                 <Row className="gutter">
-                  {product.map(item => (
+                  {product.map(product => (
                     <Col className="gutter-row">
                     <img style={style}
-                      src={item.image}
+                      src={product.image}
                       alt="Best 상품" />
-                    <p className="list_name">{item.product}</p>
-                    <p className="list_price">{item.price}</p>
+                    <p className="list_name">{product.product}</p>
+                    <p className="list_price">{product.price}</p>
                   </Col>
                   ))}
                 </Row>
@@ -111,7 +111,7 @@ function MainPage() {
             <div>
               <Row className="gutter">
               
-                  {new_product.map(item => (
+                  {new_product.map(new_product => (
                     <Col className="gutter-row">
                         <img style={style}
                           src={new_product.images}
@@ -152,10 +152,10 @@ function MainPage() {
             </h1>
             <div>
             <Row className="gutter">
-                {barter.map(item => (
+                {barter.map(barter => (
                   <Col className="gutter-row">
                     <img style={style}
-                      src={item.image}
+                      src={barter.image}
                       alt="물물교환 이미지" />
                   </Col>
                 ))}
