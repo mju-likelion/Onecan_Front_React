@@ -50,11 +50,14 @@ function RegisterPage(props) {
 
     if (Password !== ConfirmPassword) {
       return alert("비밀번호와 비밀번호 확인은 같아야 합니다.");
+    } else  {
+      alert("입력된 정보를 다시 확인해 주세요.")
     }
 
     let body = {
       email: Email,
       password: Password,
+      confirmpassword: ConfirmPassword,
       name: Name,
       Address: Address,
       Phone: Phone
@@ -209,7 +212,7 @@ function RegisterPage(props) {
                       color:'#3d463d'
                     }}
                     onClick={
-                      () => window.open('/registerterms', '_blank')}>
+                      () => window.open('/#/registerterms', '_blank')}>
                       개인정보 수집 및 활용 동의
                 </Button>
               <input 
