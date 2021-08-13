@@ -135,7 +135,7 @@ function MainPage() {
                   {recipe.map(recipe => (
                     <Col className="gutter-row">
                       <img style={style}
-                        src={recipe.image}
+                        src={"http://52.78.146.159"+recipe.image.split("8000")[1]}
                         alt="레시피 이미지" />
                     </Col>
                   ))}
