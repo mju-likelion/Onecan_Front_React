@@ -27,23 +27,23 @@ function MainPage() {
 
   useEffect(() => {
 
-    axios.get('http://localhost:8000/products/') //best api
+    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/product/`) //best api
       .then(response => {
         console.log(response);
         setProduct(response.data.slice(0, 4))
       })
-      axios.get('http://localhost:8000/new_products/') //new api
+      axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/new_product/`) //new api
       .then(response => {
         console.log(response);
         setNew_Product(response.data.slice(0, 4))
       })
  
-    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/`)//recipe api
+    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/recipe/`)//recipe api
       .then(response => {
         console.log(response);
         setRecipe(response.data.slice(0, 4))
       })
-    axios.get('http://localhost:8000/barters/') //barter api
+    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/barter/`) //barter api
       .then(response => {
         console.log(response);
         setBarter(response.data.slice(0, 4))
