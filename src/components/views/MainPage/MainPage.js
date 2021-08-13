@@ -36,7 +36,7 @@ function MainPage() {
         console.log(response);
         setNew_Product(response.data.slice(0, 4))
       })
-    axios.get('http://localhost:8000/recipes/') //recipe api
+    axios.get('http://52.78.146.159/recipes/') //recipe api
       .then(response => {
         console.log(response);
         setRecipe(response.data.slice(0, 4))
@@ -131,7 +131,7 @@ function MainPage() {
             </h1>
               <div>
                 <Row className="gutter">
-                  {recipes.map(recipes => (
+                  {recipe.map(recipes => (
                     <Col className="gutter-row">
                       <img style={style}
                         src={recipes.image}
