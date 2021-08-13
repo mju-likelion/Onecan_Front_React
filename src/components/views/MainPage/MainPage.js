@@ -38,7 +38,7 @@ function MainPage() {
         setNew_Product(response.data.slice(0, 4))
       })
       */}
-    axios.get('http://52.78.146.159/recipes/') //recipe api
+    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/recipe`) //recipe api
       .then(response => {
         console.log(response);
         setRecipe(response.data.slice(0, 4))
@@ -49,8 +49,8 @@ function MainPage() {
         console.log(response);
         setBarter(response.data.slice(0, 4))
      
-      })    */}
-  }, []) 
+      })    */};
+  }, []);
 
 
     return (
@@ -136,10 +136,10 @@ function MainPage() {
             </h1>
               <div>
                 <Row className="gutter">
-                  {recipe.map(recipes => (
+                  {recipe.map(recipe => (
                     <Col className="gutter-row">
                       <img style={style}
-                        src={recipes.image}
+                        src={recipe.image}
                         alt="음식" />
                     </Col>
                   ))}
@@ -172,7 +172,7 @@ function MainPage() {
 
       <Footer />
       </>
-    )
-  }
+    );
+  };
 
-export default withRouter(MainPage)
+export default withRouter(MainPage);
