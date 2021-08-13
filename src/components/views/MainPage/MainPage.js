@@ -26,22 +26,22 @@ function MainPage() {
   const [barter, setBarter] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/product/') //best api
+    axios.get('http://localhost:8000/products/') //best api
       .then(response => {
         console.log(response);
         setProduct(response.data.slice(0, 4))
       })
-      axios.get('http://localhost:8000/new_product/') //new api
+      axios.get('http://localhost:8000/new_products/') //new api
       .then(response => {
         console.log(response);
         setNew_Product(response.data.slice(0, 4))
       })
-    axios.get('http://localhost:8000/recipe/') //recipe api
+    axios.get('http://localhost:8000/recipes/') //recipe api
       .then(response => {
         console.log(response);
         setRecipe(response.data.slice(0, 4))
       })
-    axios.get('http://localhost:8000/barter/') //barter api
+    axios.get('http://localhost:8000/barters/') //barter api
       .then(response => {
         console.log(response);
         setBarter(response.data.slice(0, 4))
