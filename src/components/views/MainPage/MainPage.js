@@ -119,7 +119,7 @@ function MainPage() {
                     <Col className="gutter-row">
                         <img style={style}
                           src={new_product.images}
-                          alt="음식" />
+                          alt="NEW 상품" />
                       <p className="list_name">{new_product.product}</p>
                       <p className="list_price">{new_product.price}</p>
                     </Col>
@@ -140,7 +140,7 @@ function MainPage() {
                     <Col className="gutter-row">
                       <img style={style}
                         src={recipe.image}
-                        alt="음식" />
+                        alt="레시피 이미지" />
                     </Col>
                   ))}
                 </Row>
@@ -160,7 +160,7 @@ function MainPage() {
                   <Col className="gutter-row">
                     <img style={style}
                       src={item.image}
-                      alt="음식" />
+                      alt="물물교환 이미지" />
                   </Col>
                 ))}
               </Row>
