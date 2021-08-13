@@ -72,43 +72,37 @@ function RegisterPage(props) {
   };
 
   useEffect(() => {
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setEmail(response.data);
       });
 
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setName(response.data);
       });
 
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setPassword(response.data);
       });
 
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setConfirmPassword(response.data);
       });
 
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setAddress(response.data);
       });
 
-    axios
-      .post("http://localhost:8000/rest-auth/registration/")
+    axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/registration/`)
       .then((response) => {
         console.log(response);
         setPhone(response.data);
@@ -286,7 +280,7 @@ function RegisterPage(props) {
                     borderColor: "#9fdb9f",
                     color: "#3d463d",
                   }}
-                  onClick={() => window.open("/#/registerterms", "_blank")}
+                  onClick={() => window.open(`${process.env.REACT_APP_SERVER_ORIGIN}/registerterms`, "_blank")}
                 >
                   개인정보 수집 및 활용 동의
                 </Button>

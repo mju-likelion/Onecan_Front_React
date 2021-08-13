@@ -15,7 +15,7 @@ function ListBarterPage() {
 
   useEffect(() => {
     axios
-      .get(`http://52.78.146.159/barter/`) //barter api
+      .get(`${process.env.REACT_APP_SERVER_ORIGIN}/barter/`) //barter api
       .then((response) => {
         console.log(response);
         setBarter(response.data.slice(0, 10));
@@ -40,8 +40,10 @@ function ListBarterPage() {
               {barter.map((b) => (
                 <Col className="gutter-row">
                   <img style={style} 
-                  src={b.image} alt="Barter" />
-                  <p className="list_name">{b.title}</p>
+                  src={`${process.env.REACT_APP_SERVER_ORIGIN}`+b.image.split("8000")[1]} alt="Barter" />
+                  <p className="list_name">
+                    {`${process.env.REACT_APP_SERVER_ORIGIN}`+b.title.split("8000")[1]}
+                  </p>
                 </Col>
               ))}
             </Row>

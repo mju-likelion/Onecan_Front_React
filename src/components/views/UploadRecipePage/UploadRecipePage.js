@@ -14,7 +14,7 @@ function UploadRecipePage() {
 
 
       useEffect(() => {
-        axios.post(`http://52.78.146.159/recipe/`) //barter api
+        axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/recipe/`) //recipe api
           .then(response => {
           console.log(response);
           setRecipe(response.data)
@@ -46,7 +46,7 @@ function UploadRecipePage() {
               </div>
               <FileUpload 
                  style={{ borderRadius: 9}} 
-                    value={recipe.image}
+                    value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.image.split("8000")[1]}
                     alt="레시피 이미지" />
               <Form >
                   <br />
@@ -55,7 +55,7 @@ function UploadRecipePage() {
                       <Input 
                       placeholder="글 제목을 작성해주세요"
                       style={{ borderRadius: 9}}
-                      value={recipe.title}
+                      value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.title.split("8000")[1]}
                     />
                   <br />
                   <br /> {/* 여기 api 없음 */}

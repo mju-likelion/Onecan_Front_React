@@ -8,13 +8,9 @@ import Editor from '../../../components/utils/Editor';
 import axios from 'axios';
 
 function UploadBarterPage() {
-
     const [barter, setBarter] = useState([]);
-
-
-
       useEffect(() => {
-        axios.post(`http://52.78.146.159/barter/`) //barter api
+        axios.post(`${process.env.REACT_APP_SERVER_ORIGIN}/barter/`) //barter api
           .then(response => {
           console.log(response);
           setBarter(response.data)
@@ -31,7 +27,6 @@ function UploadBarterPage() {
         setMountBody(mb => !mb);
   }
 
-
       return (
         <div className="UploadRecipeContainer">
           <Header />
@@ -46,7 +41,7 @@ function UploadBarterPage() {
               </div>
               <FileUpload 
                       style={{ borderRadius: 9}} 
-                          value={barter.image}
+                          value={`${process.env.REACT_APP_SERVER_ORIGIN}`+barter.image.split("8000")[1]}
                           alt="물물교환 이미지" />
               <Form >
                   <br />
@@ -55,7 +50,7 @@ function UploadBarterPage() {
                       <Input 
                       placeholder="글 제목을 작성해주세요"
                       style={{ borderRadius: 9}}
-                      value={barter.title}
+                      value={`${process.env.REACT_APP_SERVER_ORIGIN}`+barter.title.split("8000")[1]}
                     />
                   <br />
                   <br /> {/* 여기 api 없음 */}
