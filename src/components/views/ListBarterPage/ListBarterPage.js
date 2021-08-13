@@ -1,65 +1,58 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import { Row, Col } from 'antd';
-
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import { Row, Col } from "antd";
 
 function ListBarterPage() {
+  const style = {
+    width: "50px",
+    height: "100px",
+    borderRadius: "9px",
+  };
 
-    const imgStyle = {
-        width: '100%',
-        height: '470px',
-      };
+  const [barter, setBarter] = useState([]);
 
-    const style = {
-        width: '250px',
-        height: '200px',
-        borderRadius: '9px'
-      };
+  useEffect(() => {
+    axios
+      .get(`http://52.78.146.159/barter/`) //barter api
+      .then((response) => {
+        console.log(response);
+        setBarter(response.data.slice(0, 10));
+      });
+  }, []);
 
-     const [barter, setBarter] = useState([]);
-
-     useEffect(() => {
-
-     axios.get(`http://52.78.146.159/barter/`) //barter api
-     .then(response => {
-     console.log(response);
-     setBarter(response.data.slice(0, 10))
-        })
-    }, []);
-
-    return (
-        <div className="form">
-            <Header />
-            <div style={{
-            marginTop: '200px',
-            width: '100%',
-            height: '120px'
-            }}>
-            <div className="firstBlock">
-              <h1 className="categoryTitleFirst">
-                물물교환
-              </h1>
-              <div>
-                <Row className="gutter">
-                  {barter.map(barter => (
-                    <Col className="gutter-row">
-                    <img style={style}
-                      src={barter.image}
-                      alt="Barter" />
-                    <p className="list_name">{barter.title}</p>
-                  </Col>
-                  ))}
-                </Row>
-                <br />
-                <br />
-              </div>
-            </div>
-            </div>
-            <Footer />
+  return (
+    <>
+      <Header />
+      <div className="form">
+        <div
+          style={{
+            marginTop: "50px",
+            width: "100%",
+            height: "50px",
+          }}
+        >
+          <div className="firstBlock"></div>
+          <h1 className="categoryTitleFirst2">물물교환</h1>
+          <div>
+            <Row className="gutter">
+              {barter.map((b) => (
+                <Col className="gutter-row">
+                  <img style={style} 
+                  src={b.image} alt="Barter" />
+                  <p className="list_name">{b.title}</p>
+                </Col>
+              ))}
+            </Row>
+            <br />
+            <br />
+          </div>
         </div>
-    )
+      </div>
+      <Footer />
+    </>
+  );
 }
 
-export default ListBarterPage
+export default ListBarterPage;

@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
 import { Input, Button } from "antd";
+import axios from "axios";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -71,6 +72,48 @@ function RegisterPage(props) {
   };
 
   useEffect(() => {
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setEmail(response.data);
+      });
+
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setName(response.data);
+      });
+
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setPassword(response.data);
+      });
+
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setConfirmPassword(response.data);
+      });
+
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setAddress(response.data);
+      });
+
+    axios
+      .post("http://localhost:8000/rest-auth/registration/")
+      .then((response) => {
+        console.log(response);
+        setPhone(response.data);
+      });
+
     if (Phone.length === 10) {
       setPhone(Phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
     }
