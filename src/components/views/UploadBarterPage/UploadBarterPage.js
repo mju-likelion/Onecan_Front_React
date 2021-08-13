@@ -1,28 +1,27 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Form, Input} from 'antd';
 import FileUpload from '../../utils/FileUpload';
 import Header from '../../../components/views/Header/Header';
 import Footer from '../../../components/views/Footer/Footer';
 import  '../../../components/views/UploadRecipePage/UploadRecipe.css';
 import Editor from '../../../components/utils/Editor';
+import axios from 'axios';
 
-const {} = Input;
 function UploadBarterPage() {
 
-      const [Title, setTitle] = useState("")
-      const [Description, setDescription] = useState("")
-      const [Images, setImages] = useState([])
+    const [barter, setBarter] = useState([]);
 
-      const titleChangeHandler = (event) => {
-        setTitle(event.currentTarget.value)
-      }
-      const descriptionChangeHandler = (event) => {
-        setDescription(event.currentTarget.value)
-      }
-      const imagesChangeHandler =(event) => {
-        setImages(event.currentTarget.value)
-      }
 
+
+      useEffect(() => {
+        axios.post(`http://52.78.146.159/barter/`) //barter api
+          .then(response => {
+          console.log(response);
+          setBarter(response.data)
+        });
+      });
+
+    /*여기 코드 뭔 말인지 모르겠음 살려주세요 */
       const [body, setBody] = useState('');  // Quill 에디터의 innerHTML을 담는 state
       const [mountBody, setMountBody] = useState(false); // 리렌더링 용도 state
 
@@ -47,43 +46,36 @@ function UploadBarterPage() {
               </div>
               <FileUpload 
                       style={{ borderRadius: 9}} 
-                      onChange={imagesChangeHandler} 
-                      value={Images}/>
-              <Form style ={{}}>
-                     
+                          value={barter.image}
+                          alt="물물교환 이미지" />
+              <Form >
                   <br />
                   <br />
                   <label>글 제목</label>
                       <Input 
                       placeholder="글 제목을 작성해주세요"
-                      style={{ borderRadius: 9}} 
-                      onChange={titleChangeHandler} 
-                      value={Title}/>
+                      style={{ borderRadius: 9}}
+                      value={barter.title}
+                    />
                   <br />
-                  <br />
+                  <br /> {/* 여기 api 없음 */}
                   <label>글 작성</label>
-                  <Editor
+                  <Editor>
                       body={body}
-                      handleQuillChange={descriptionChangeHandler}
                       mountBody={mountBody}
-                      value= {Description}>
-                      </Editor>
+                  </Editor>
                   <br />
                   <br />
-                  
               </Form>
               <button 
                 className="recipePostButton"
                 style={{ borderRadius: 9, marginTop: 20, marginLeft:580}}>
                       <p className="recipepostText">작성 완료</p>
               </button>
-      <>
-      </>
               </div>
             </div>
           <Footer />
         </div>
-      )
-    }
-
-export default UploadBarterPage
+      );
+    };
+export default UploadBarterPage;
