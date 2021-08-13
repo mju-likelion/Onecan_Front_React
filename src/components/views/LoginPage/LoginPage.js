@@ -61,7 +61,8 @@ function LoginPage(props) {
              width: 300, 
              height: 30, 
              borderRadius: 9, 
-             color: '#E0E0E0'}} />
+             color: '#E0E0E0',
+             borderColor:'#9fdb9f'}} />
         <label style={{
            fontSize: 20, 
            fontFamily: 'Montserrat'}}>PW</label>
@@ -73,7 +74,8 @@ function LoginPage(props) {
             width: 300, 
             height: 30, 
             borderRadius: 9, 
-            color: '#E0E0E0'}} />
+            color: '#E0E0E0',
+            borderColor:'#9fdb9f'}} />
         <br />
         <button 
           type="submit"

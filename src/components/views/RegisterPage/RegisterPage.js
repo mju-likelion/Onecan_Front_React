@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
 import { Input, Button, } from "antd";
+import Popup from '../TermsPage/RegisterTermsPage';
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -66,6 +67,7 @@ function RegisterPage(props) {
       }
     });
   };
+  
   useEffect(() => {
     if (Phone.length === 10) {
       setPhone(Phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
@@ -112,7 +114,9 @@ function RegisterPage(props) {
                 width: 330,
                 height: 30,
                 borderRadius: 9,
-                marginBottom: 15
+                marginBottom: 15,
+                borderColor:'#9fdb9f',
+                color: '#3d463d'
               }}
             />
 
@@ -125,7 +129,9 @@ function RegisterPage(props) {
               onChange={onNameHandler}
               style={{
                 borderRadius: 9,
-                marginBottom: 15
+                marginBottom: 15,
+                borderColor:'#9fdb9f',
+                color: '#3d463d'
               }}
             />
 
@@ -138,7 +144,9 @@ function RegisterPage(props) {
               onChange={onPasswordHandler}
               style={{
                 borderRadius: 9,
-                marginBottom: 15
+                marginBottom: 15,
+                borderColor:'#9fdb9f',
+                color: '#3d463d'
               }}
             />
 
@@ -151,7 +159,9 @@ function RegisterPage(props) {
               onChange={onConfirmPasswordHandler}
               style={{
                 borderRadius: 9,
-                marginBottom: 15
+                marginBottom: 15,
+                borderColor:'#9fdb9f',
+                color: '#3d463d'
               }}
             />
             <br />
@@ -165,7 +175,9 @@ function RegisterPage(props) {
             onChange={onAddressHandler}
             style={{
               borderRadius: 9,
-              marginBottom: 15
+              marginBottom: 15,
+              borderColor:'#9fdb9f',
+              color: '#3d463d'
             }} />
 
             <label>전화번호(콜)</label>
@@ -177,23 +189,46 @@ function RegisterPage(props) {
             onChange={onPhoneHandler}
             style={{
               borderRadius: 9,
-              marginBottom: 15
+              marginBottom: 15,
+              borderColor:'#9fdb9f',
+              color: '#3d463d'
             }} />
             <br />
 
             <label>
-              <Button 
-              type="link"
-              style={{color: "green"}}
-              >개인정보 수집 및 활용 동의</Button>
-              <input type="checkbox" />
+
+                <Button 
+                    style={{
+                      borderRadius: 9, 
+                      marginRight: '1%', 
+                      borderColor:'#9fdb9f',
+                      color:'#3d463d'
+                    }}
+                    onClick={
+                      () => window.open('https://onecandoit.netlify.app/#/RegisterTermsPage', '_blank')}>
+                      개인정보 수집 및 활용 동의
+                </Button>
+              <input 
+              style={{
+                width:'40px', 
+                height:'13px', 
+                marginTop:'3%', 
+                marginBottom:'-2%',
+                borderColor:'#9fdb9f'
+              }}
+              type="checkbox" />
             </label>
             <br />
 
             <Button
               type="submit"
               onClick={onSubmitHandler}
-              style={{ color: "#31572E", borderRadius: 9}}
+              style={{ 
+                color: "#31572E", 
+                borderRadius: 9,
+                borderColor:'#9fdb9f',
+                color: '#3d463d'
+              }}
             >
               가입하기
             </Button>
