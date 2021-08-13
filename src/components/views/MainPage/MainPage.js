@@ -113,7 +113,7 @@ function MainPage() {
                   {new_product.map(item => (
                     <Col className="gutter-row">
                         <img style={style}
-                          src={item.images}
+                          src={new_product.images}
                           alt="음식" />
                       <p className="list_name">{new_product.product}</p>
                       <p className="list_price">{new_product.price}</p>
@@ -124,7 +124,6 @@ function MainPage() {
               <br />
             </div>
           </div>
-
           <div className="thirdBlock">
             <h1 className="categoryTitle">
                 <Link to='/listrecipe' style={{color: '#4d804a'}}>
@@ -132,7 +131,7 @@ function MainPage() {
             </h1>
               <div>
                 <Row className="gutter">
-                  {recipe.map(recipes => (
+                  {recipes.map(recipes => (
                     <Col className="gutter-row">
                       <img style={style}
                         src={recipes.image}
