@@ -27,7 +27,7 @@ function MainPage() {
 
   useEffect(() => {
 
-    axios.get(`${process.env.REACT_APP_SERVER_ORIGIN}/product/`) //best api
+    axios.get(`http://52.78.146.159/product/`) //best api
       .then(response => {
         console.log(response);
         setProduct(response.data.slice(0, 4))
