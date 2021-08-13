@@ -165,7 +165,7 @@ function ListObjBestPage(props) {
         <div
           style={{ textAlign: "center", marginTop: "20%", marginBotton: "5%" }}
         >
-          <h1>BEST</h1>
+          <h1>유제품</h1>
         </div>
 
         {/* Filter */}
