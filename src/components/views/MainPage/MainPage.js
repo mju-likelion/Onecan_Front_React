@@ -93,7 +93,7 @@ function MainPage() {
                     <img style={style}
                       src={item.image}
                       alt="Best 상품" />
-                    <p className="list_name">{item.prodcut}</p>
+                    <p className="list_name">{item.product}</p>
                     <p className="list_price">{item.price}</p>
                   </Col>
                   ))}
@@ -115,8 +115,8 @@ function MainPage() {
                         <img style={style}
                           src={item.images}
                           alt="음식" />
-                      <p className="list_name">{item.product}</p>
-                      <p className="list_price">{item.price}</p>
+                      <p className="list_name">{new_product.product}</p>
+                      <p className="list_price">{new_product.price}</p>
                     </Col>
                 ))}
               </Row>
@@ -132,10 +132,10 @@ function MainPage() {
             </h1>
               <div>
                 <Row className="gutter">
-                  {recipe.map(item => (
+                  {recipe.map(recipes => (
                     <Col className="gutter-row">
                       <img style={style}
-                        src={item.image}
+                        src={recipes.image}
                         alt="음식" />
                     </Col>
                   ))}
