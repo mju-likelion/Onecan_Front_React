@@ -209,7 +209,7 @@ function RegisterPage(props) {
                       color:'#3d463d'
                     }}
                     onClick={
-                      () => window.open('/RegisterTermsPage', '_blank')}>
+                      () => window.open('/registerterms', '_blank')}>
                       개인정보 수집 및 활용 동의
                 </Button>
               <input 

@@ -44,7 +44,7 @@ function App() {
         <Route exact path="/mypage" component={Auth(MyPage, true)} />
         <Route exact path="/join" component={Auth(Join, true)} />
         <Route exact path="/faq" component={Auth(FAQ, true)} />
-        <Route exact path="/registertrems" component={Auth(RegisterTermsPage, true)} />
+        <Route exact path="/registerterms" component={Auth(RegisterTermsPage, true)} />
 
       </Switch>
     </div>
