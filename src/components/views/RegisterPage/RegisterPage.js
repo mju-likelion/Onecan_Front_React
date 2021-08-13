@@ -4,7 +4,7 @@ import { registerUser } from "../../../_actions/user_action";
 import { withRouter } from "react-router-dom";
 import Header from "../../../components/views/Header/Header";
 import Footer from "../../../components/views/Footer/Footer";
-import { Input, Button, } from "antd";
+import { Input, Button } from "antd";
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -48,8 +48,8 @@ function RegisterPage(props) {
 
     if (Password !== ConfirmPassword) {
       return alert("비밀번호와 비밀번호 확인은 같아야 합니다.");
-    } else  {
-      alert("입력된 정보를 다시 확인해 주세요.")
+    } else {
+      alert("입력된 정보를 다시 확인해 주세요.");
     }
 
     let body = {
@@ -58,7 +58,7 @@ function RegisterPage(props) {
       confirmpassword: ConfirmPassword,
       name: Name,
       Address: Address,
-      Phone: Phone
+      Phone: Phone,
     };
 
     dispatch(registerUser(body)).then((response) => {
@@ -69,7 +69,7 @@ function RegisterPage(props) {
       }
     });
   };
-  
+
   useEffect(() => {
     if (Phone.length === 10) {
       setPhone(Phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
@@ -83,11 +83,13 @@ function RegisterPage(props) {
 
   return (
     <>
-      <Header />
-      <div style={{
-      display: 'flex', justifyContent: 'center', alignItems: 'center',
-      width: '100%', height: '100vh'
-    }}>
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <Header />
+      </div>
       <div
         style={{
           display: "flex",
@@ -97,150 +99,183 @@ function RegisterPage(props) {
           height: "100vh",
         }}
       >
-        <div style={{ paddingTop: 300 }}>
-          <br />
-          <h1 style={{ paddingTop: 20, letterSpacing: 10, fontFamily: 'Montserrat', textAlign: 'center'}}>We can do it!</h1>
-          <h2 style={{ display: "flex", justifyContent: "center", fontFamily: 'Montserrat', fontSize: 25, letterSpacing: 5 }}>
-            회원가입
-          </h2>
-          <br />
-          <form
-            style={{ display: "flex", flexDirection: "column", marginLeft: 460, marginRight: 460 }}
-            onSubmit={onSubmitHandler}
-          >
-            <label>이메일(아이디)</label>
-            <Input
-              id="email"
-              placeholder="이메일을 입력하세요"
-              type="text"
-              value={Email}
-              onChange={onEmailHandler}
-              style={{
-                width: 330,
-                height: 30,
-                borderRadius: 9,
-                marginBottom: 15,
-                borderColor:'#9fdb9f',
-                color: '#3d463d'
-              }}
-            />
-
-            <label>이름</label>
-            <Input
-              id="name"
-              placeholder="이름을 입력하세요"
-              type="text"
-              value={Name}
-              onChange={onNameHandler}
-              style={{
-                borderRadius: 9,
-                marginBottom: 15,
-                borderColor:'#9fdb9f',
-                color: '#3d463d'
-              }}
-            />
-
-            <label>비밀번호</label>
-            <Input 
-              id ="password"
-              placeholder="비밀번호를 입력하세요"
-              type="password"
-              value={Password}
-              onChange={onPasswordHandler}
-              style={{
-                borderRadius: 9,
-                marginBottom: 15,
-                borderColor:'#9fdb9f',
-                color: '#3d463d'
-              }}
-            />
-
-            <label>비밀번호 확인</label>
-            <Input
-              id ="Confirmpassword"
-              placeholder="비밀번호를 한 번 더 입력하세요"
-              type="password"
-              value={ConfirmPassword}
-              onChange={onConfirmPasswordHandler}
-              style={{
-                borderRadius: 9,
-                marginBottom: 15,
-                borderColor:'#9fdb9f',
-                color: '#3d463d'
-              }}
-            />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          <div style={{ paddingTop: 300 }}>
             <br />
-
-            <label>주소</label>
-            <Input 
-            id ="Address"
-            placeholder="주소를 입력하세요(상세 주소 포함)"
-            type="text"
-            value={Address} 
-            onChange={onAddressHandler}
-            style={{
-              borderRadius: 9,
-              marginBottom: 15,
-              borderColor:'#9fdb9f',
-              color: '#3d463d'
-            }} />
-
-            <label>전화번호(콜)</label>
-            <Input 
-            id ="Phone"
-            placeholder="전화번호를 입력하세요"
-            type="text" 
-            value={Phone} 
-            onChange={onPhoneHandler}
-            style={{
-              borderRadius: 9,
-              marginBottom: 15,
-              borderColor:'#9fdb9f',
-              color: '#3d463d'
-            }} />
-            <br />
-
-            <label>
-
-                <Button 
-                    style={{
-                      borderRadius: 9, 
-                      marginRight: '1%', 
-                      borderColor:'#9fdb9f',
-                      color:'#3d463d'
-                    }}
-                    onClick={
-                      () => window.open('/#/registerterms', '_blank')}>
-                      개인정보 수집 및 활용 동의
-                </Button>
-              <input 
+            <h1
               style={{
-                width:'40px', 
-                height:'13px', 
-                marginTop:'3%', 
-                marginBottom:'-2%',
-                borderColor:'#9fdb9f'
-              }}
-              type="checkbox" />
-            </label>
-            <br />
-
-            <Button
-              type="submit"
-              onClick={onSubmitHandler}
-              style={{ 
-                color: "#31572E", 
-                borderRadius: 9,
-                borderColor:'#9fdb9f',
-                color: '#3d463d'
+                paddingTop: 20,
+                letterSpacing: 10,
+                fontFamily: "Montserrat",
+                textAlign: "center",
               }}
             >
-              가입하기
-            </Button>
-          </form>
+              We can do it!
+            </h1>
+            <h2
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontFamily: "Montserrat",
+                fontSize: 25,
+                letterSpacing: 5,
+              }}
+            >
+              회원가입
+            </h2>
+            <br />
+            <form
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: 460,
+                marginRight: 460,
+              }}
+              onSubmit={onSubmitHandler}
+            >
+              <label>이메일(아이디)</label>
+              <Input
+                id="email"
+                placeholder="이메일을 입력하세요"
+                type="text"
+                value={Email}
+                onChange={onEmailHandler}
+                style={{
+                  width: 330,
+                  height: 30,
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+
+              <label>이름</label>
+              <Input
+                id="name"
+                placeholder="이름을 입력하세요"
+                type="text"
+                value={Name}
+                onChange={onNameHandler}
+                style={{
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+
+              <label>비밀번호</label>
+              <Input
+                id="password"
+                placeholder="비밀번호를 입력하세요"
+                type="password"
+                value={Password}
+                onChange={onPasswordHandler}
+                style={{
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+
+              <label>비밀번호 확인</label>
+              <Input
+                id="Confirmpassword"
+                placeholder="비밀번호를 한 번 더 입력하세요"
+                type="password"
+                value={ConfirmPassword}
+                onChange={onConfirmPasswordHandler}
+                style={{
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+              <br />
+
+              <label>주소</label>
+              <Input
+                id="Address"
+                placeholder="주소를 입력하세요(상세 주소 포함)"
+                type="text"
+                value={Address}
+                onChange={onAddressHandler}
+                style={{
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+
+              <label>전화번호(콜)</label>
+              <Input
+                id="Phone"
+                placeholder="전화번호를 입력하세요"
+                type="text"
+                value={Phone}
+                onChange={onPhoneHandler}
+                style={{
+                  borderRadius: 9,
+                  marginBottom: 15,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              />
+              <br />
+
+              <label>
+                <Button
+                  style={{
+                    borderRadius: 9,
+                    marginRight: "1%",
+                    borderColor: "#9fdb9f",
+                    color: "#3d463d",
+                  }}
+                  onClick={() => window.open("/#/registerterms", "_blank")}
+                >
+                  개인정보 수집 및 활용 동의
+                </Button>
+                <input
+                  style={{
+                    width: "40px",
+                    height: "13px",
+                    marginTop: "3%",
+                    marginBottom: "-2%",
+                    borderColor: "#9fdb9f",
+                  }}
+                  type="checkbox"
+                />
+              </label>
+              <br />
+
+              <Button
+                type="submit"
+                onClick={onSubmitHandler}
+                style={{
+                  color: "#31572E",
+                  borderRadius: 9,
+                  borderColor: "#9fdb9f",
+                  color: "#3d463d",
+                }}
+              >
+                가입하기
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
       <Footer />
     </>
   );
