@@ -162,7 +162,7 @@ function ListRecipePage(props) {
       <Header />
       <div style={{ }}>
           <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
-          <h1>{List.title}</h1>
+          <h1>레시피</h1>
           </div>
 
           {/* Filter */}

@@ -103,7 +103,7 @@ function MainPage(props) {
             </div>
           <div className="secondBlock">
               <h1 className="categoryTitle">
-                <Link to='/listobj/:listId' style={{color: '#4d804a'}}>
+                <Link to='/listnew' style={{color: '#4d804a'}}>
                   신상품<RightOutlined /></Link>
               </h1> 
             <div>

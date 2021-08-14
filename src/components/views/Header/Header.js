@@ -42,25 +42,25 @@ function Header(props) {
         <Link to='/listobj/:listId'>Best 상품</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>New 상품</Link>
+        <Link to='/listnew'>New 상품</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>채소ㆍ과일</Link>
+        <Link to='/listvegetable'>채소ㆍ과일</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>수산물</Link>
+        <Link to='/listseafood'>수산물</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>정육ㆍ계란</Link>
+        <Link to='/listdmeat'>정육ㆍ계란</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>생수ㆍ음료</Link>
+        <Link to='/listdrink'>생수ㆍ음료</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>유제품</Link>
+        <Link to='/listmilk'>유제품</Link>
         </Menu.Item>
         <Menu.Item>
-        <Link to='/listobj/:listId'>생필품ㆍ주방용품</Link>
+        <Link to='/listdaily'>생필품ㆍ주방용품</Link>
         </Menu.Item>
         
     </Menu>

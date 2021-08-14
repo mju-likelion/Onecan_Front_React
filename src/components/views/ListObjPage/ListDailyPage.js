@@ -22,6 +22,10 @@ function ListDailyPage() {
       });
   }, []);
 
+  const onClickMain = (e) => {
+    document.location.href = "/";
+  };
+
   return (
     <>
       <Header />
@@ -34,7 +38,13 @@ function ListDailyPage() {
           }}
         >
           <div className="firstBlock"></div>
-          <h1 className="categoryTitleFirst2">물물교환</h1>
+          <h1 
+          className="categoryTitleFirst1" 
+          style={{
+            textAlign: "center", 
+            marginTop: "20%", 
+            marginBotton: "5%",
+            marginLeft:'-8%' }}>유제품</h1>
           <div>
             <Row className="gutter">
               {product.map((p) => (
@@ -48,6 +58,30 @@ function ListDailyPage() {
             <br />
             <br />
           </div>
+          <div>
+          <h3
+            style={{
+              textAlign: "center",
+              margin: "30px",
+              marginRight:"10%"
+            }}
+          >
+            현재 진열된 상품이 없습니다 :)
+          </h3>
+          <p
+            onClick={onClickMain}
+            style={{
+              textAlign: "center",
+              fontFamily: "Montserrat",
+              fontSize: "15px",
+              cursor: "pointer",
+              marginRight:"8%",
+            }}
+          >
+            One can do it! 메인 홈 이동
+          </p>
+        </div>
+        <br />
         </div>
       </div>
       <Footer />

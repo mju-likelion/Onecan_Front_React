@@ -20,7 +20,13 @@ import FAQ from './components/views/FAQ/FAQ';
 import RegisterTermsPage from './components/views/TermsPage/RegisterTermsPage';
 import DetailRecipePage from './components/views/DetailRecipePage/DetailRecipePage';
 import DetailBarterPage from './components/views/DetailBarterPage/DetailBarterPage';
-
+import ListDailyPage from './components/views/ListObjPage/ListDailyPage';
+import ListDrinkPage from './components/views/ListObjPage/ListDrinkPage';
+import ListMeatPage from './components/views/ListObjPage/ListMeatPage';
+import ListMilkPage from './components/views/ListObjPage/ListMilkPage';
+import ListNewPage from './components/views/ListObjPage/ListNewPage';
+import ListSeafoodPage from './components/views/ListObjPage/ListSeafoodPage';
+import ListVegetablePage from './components/views/ListObjPage/ListVegetablePage';
 function App() {
   return (
     <Router>
@@ -39,6 +45,16 @@ function App() {
         <Route exact path="/listsearch" component={Auth(ListSearchPage, null)} />
         <Route exact path="/detailrecipe" component={Auth(DetailRecipePage, null)} />
         <Route exact path="/detailbarter" component={Auth(DetailBarterPage, null)} />
+        <Route exact path="/listdaily" component={Auth(ListDailyPage, null)} />
+        <Route exact path="/listdrink" component={Auth(ListDrinkPage, null)} />
+        <Route exact path="/listdmeat" component={Auth(ListMeatPage, null)} />
+        <Route exact path="/listmilk" component={Auth(ListMilkPage, null)} />
+        <Route exact path="/listnew" component={Auth(ListNewPage, null)} />
+        <Route exact path="/listseafood" component={Auth(ListSeafoodPage, null)} />
+        <Route exact path="/listvegetable" component={Auth(ListVegetablePage, null)} />
+
+
+
         <Route exact path="/terms" component={Auth(TermsPage, true)} />
         <Route exact path="/information" component={Auth(InfoPage, true)} />
         <Route exact path="/mypage" component={Auth(MyPage, true)} />

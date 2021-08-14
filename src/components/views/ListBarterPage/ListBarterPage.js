@@ -34,7 +34,13 @@ function ListBarterPage() {
           }}
         >
           <div className="firstBlock"></div>
-          <h1 className="categoryTitleFirst2">물물교환</h1>
+          <h1 
+          className="categoryTitleFirst1" 
+          style={{
+            textAlign: "center", 
+            marginTop: "20%", 
+            marginBotton: "5%" , 
+            marginLeft:'-8%'}}>물물교환</h1>
           <div>
             <Row className="gutter">
               {barter.map((b) => (
