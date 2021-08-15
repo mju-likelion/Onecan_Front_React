@@ -13,8 +13,9 @@ export default function (SpecificComponent, option, adminRoute = null) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-      dispatch(auth()).then((response) => {
-        console.log(response);
+      dispatch(auth(`${process.env.REACT_APP_SERVER_ORIGIN}/rest-auth/login/`))
+      .then((response) => {
+        console.log(response.data);
 
         //로그인 하지 않은 상태
         if (!response.payload.isAuth) {
