@@ -27,6 +27,8 @@ import ListMilkPage from './components/views/ListObjPage/ListMilkPage';
 import ListNewPage from './components/views/ListObjPage/ListNewPage';
 import ListSeafoodPage from './components/views/ListObjPage/ListSeafoodPage';
 import ListVegetablePage from './components/views/ListObjPage/ListVegetablePage';
+import RecipePlus from './components/views/Plus/recipePlus';
+
 function App() {
   return (
     <Router>
@@ -61,6 +63,8 @@ function App() {
         <Route exact path="/join" component={Auth(Join, true)} />
         <Route exact path="/faq" component={Auth(FAQ, true)} />
         <Route exact path="/registerterms" component={Auth(RegisterTermsPage, true)} />
+
+        <Route exact path="/recipeplus" component={Auth(RecipePlus, null)} />
 
       </Switch>
     </div>

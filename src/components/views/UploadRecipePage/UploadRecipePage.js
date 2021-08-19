@@ -42,11 +42,11 @@ function UploadRecipePage() {
               <div 
               style={{textAlign: 'center', marginBottom: '2rem'}}>
                 <h1 
-                style ={{display:'flex', justifyContent:'start'}}>물물교환 신청서 작성</h1>
+                style ={{display:'flex', justifyContent:'start'}}>레시피 작성</h1>
               </div>
               <FileUpload 
                  style={{ borderRadius: 9}} 
-                    value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.image.split("8000")[1]}
+                    //value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.image.split("8000")[1]}
                     alt="레시피 이미지" />
               <Form >
                   <br />
@@ -55,7 +55,7 @@ function UploadRecipePage() {
                       <Input 
                       placeholder="글 제목을 작성해주세요"
                       style={{ borderRadius: 9}}
-                      value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.title.split("8000")[1]}
+                      //value={`${process.env.REACT_APP_SERVER_ORIGIN}`+recipe.title.split("8000")[1]}
                     />
                   <br />
                   <br /> {/* 여기 api 없음 */}

@@ -6,10 +6,17 @@ import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { Link } from "react-router-dom";
 
 
 function ListRecipePage(props) {
-
+  const style ={
+      width: "20%",
+      height: "300px",
+      marginLeft: "20%",
+      cursor: 'pointer',
+      borderRadius: '10px'
+  }
   const [Products, setProducts] = useState([])
   const [Skip, setSkip] = useState(0)
   const [Limit, setLimit] = useState(8) //화면에 보일 카드의 최대 개수
@@ -20,9 +27,6 @@ function ListRecipePage(props) {
  })
   const [SearchTerm, setSearchTerm] = useState("")
 
-  const onClickMain = (e) => {
-    document.location.href = "/";
-  };
 
 
   //url props number 바뀌는 거
@@ -97,65 +101,7 @@ function ListRecipePage(props) {
       </Col>
   })
 
-  
 
-  const showFilteredResults = (filters) => {
-
-      let body = {
-          skip: 0,
-          limit: Limit,
-          filters: filters
-      }
-
-      getProducts(body)
-      setSkip(0)
-
-  }
-
-  {/*
-  const handlePrice = (value) => {
-      const data = price;
-      let array = [];
-
-      for (let key in data) {
-          if (data[key]._id === parseInt(value, 10)) {
-              array = data[key].array;
-          }
-      }
-      return array;
-  }      */}
-
-  {/*
-  const handleFilters = (filters, category) => {
-
-      const newFilters = { ...Filters }
-
-      newFilters[category] = filters
-
-      console.log('filters', filters)
-
-      if (category === "price") {
-          let priceValues = handlePrice(filters)
-          newFilters[category] = priceValues
-      }
-      showFilteredResults(newFilters)
-      setFilters(newFilters)
-  } */}
- 
-  const updateSearchTerm = (newSearchTerm) => { //검색 기능
-
-      let body = {
-          skip: 0,
-          limit: Limit,
-          filters: Filters,
-          searchTerm: newSearchTerm
-      }
-
-      setSkip(0)
-      setSearchTerm(newSearchTerm)
-      getProducts(body)
-
-  }
 
   return (
       <>
@@ -163,50 +109,42 @@ function ListRecipePage(props) {
       <div style={{ }}>
           <div style={{ textAlign: 'center', marginTop:'20%', marginBotton:'5%' }}>
           <h1>레시피</h1>
+          <Link to ="/uploadrecipe">
+              <button
+                    className="ToCart"
+                    style={{marginLeft:'50%', cursor: 'pointer'}}>
+                    <p className="ToCartText">작성하기</p>
+              </button>
+         </Link>
           </div>
 
-          {/* Filter */}
-          {/* 
-            <Row gutter={[16, 16]}>
-                <Col lg={12} xs={24}>
-                  //CheckBox 
-                    <Checkbox list={continents} handleFilters={filters => handleFilters(filters, "Continents")} />
-                </Col>
-              </Row>
-                <Col lg={12} xs={24}>
-                    //RadioBox
-                    </div><Radiobox list={price} handleFilters={filters => handleFilters(filters, "price")} />
-                </Col>  
-           */}
-
-          {/* Search */}
-          {/* 검색 박스
-          <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '1rem auto' }}>
-              <SearchFeature
-                  refreshFunction={updateSearchTerm} //검색 기능을 부모 컴포넌트에 가지고 오기
-              />
-          </div> 
-          */}
+      
 
           {/* Cards */}
 
               {renderCards}
 
           <br />
+          <div>
+            <Link to="recipeplus">
+                <img style={style}
+                    src="https://cdn.pixabay.com/photo/2016/09/29/08/33/apple-1702316_960_720.jpg"
+                    alt="광고" /></Link>
+           </div>
 
           <div>
-          <h3 style={{
-            textAlign: 'center',
-            margin: '30px'
-          }}>현재 올라온 레시피가 없습니다 :)</h3>
-          <p
-            onClick={onClickMain}
-            style={{
-              textAlign: 'center',
-              fontFamily: 'Montserrat',
-              fontSize: '15px',
-              cursor: 'pointer'
-            }}>One can do it! 메인 홈 이동</p>
+            <h3 style={{
+                textAlign: 'center',
+                margin: '30px',
+                marginTop: '10%',
+            }}>현재 1 건 외 올라온 레시피가 없습니다 :)</h3>
+            <p
+                style={{
+                textAlign: 'center',
+                fontFamily: 'Montserrat',
+                fontSize: '15px',
+                cursor: 'pointer',
+                }}>One can do it! 메인 홈 이동</p>
         </div>
 
           {PostSize >= Limit &&

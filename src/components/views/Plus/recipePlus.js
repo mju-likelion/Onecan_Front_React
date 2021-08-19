@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Carousel } from "react-carousel-minimal";
 
-function DetailRecipePage() {
+function recipeplus() {
   const data = [
     {
       image:
@@ -76,7 +76,7 @@ function DetailRecipePage() {
           </div>
         </div>
         <div style={{ marginLeft: "27%", marginTop: "8%", marginBotton: "5%" }}>
-          <h1>DetailRecipe.title</h1>
+          <h1>DetailRecipe.title : 사과의 방법 레시피</h1>
         </div>
         <div
           style={{
@@ -112,4 +112,4 @@ function DetailRecipePage() {
     </>
   );
 }
-export default DetailRecipePage;
+export default recipeplus;
